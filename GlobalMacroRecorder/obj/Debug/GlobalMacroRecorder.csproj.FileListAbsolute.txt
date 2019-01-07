@@ -1,0 +1,12 @@
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.exe
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.pdb
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.dll
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.pdb
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.csprojResolveAssemblyReference.cache
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.MacroForm.resources
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.Properties.Resources.resources
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.csproj.GenerateResource.Cache
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb

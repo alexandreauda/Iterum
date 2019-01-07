@@ -1,0 +1,8 @@
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\MouseKeyboardLibrary\bin\Debug\MouseKeyboardLibrary.dll
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\MouseKeyboardLibrary\bin\Debug\MouseKeyboardLibrary.pdb
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\MouseKeyboardLibrary\obj\Debug\MouseKeyboardLibrary.dll
+D:\Userfiles\aauda\Documents\MouseKeyboardLibrary\MouseKeyboardLibrary\obj\Debug\MouseKeyboardLibrary.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\bin\Debug\MouseKeyboardLibrary.dll
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\bin\Debug\MouseKeyboardLibrary.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\obj\Debug\MouseKeyboardLibrary.dll
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\obj\Debug\MouseKeyboardLibrary.pdb

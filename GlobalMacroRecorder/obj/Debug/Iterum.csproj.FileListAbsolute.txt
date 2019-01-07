@@ -1,0 +1,40 @@
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.exe
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.pdb
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.dll
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.pdb
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\Iterum.csprojResolveAssemblyReference.cache
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.MacroForm.resources
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.Properties.Resources.resources
+D:\Userfiles\aauda\Documents\Iterum\GlobalMacroRecorder\obj\Debug\Iterum.csproj.GenerateResource.Cache
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.exe
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.pdb
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.dll
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.pdb
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\obj\Debug\Iterum.csprojResolveAssemblyReference.cache
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.MacroForm.resources
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.Properties.Resources.resources
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\obj\Debug\Iterum.csproj.GenerateResource.Cache
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
+C:\Users\Alexandre\Documents\Visual Studio 2012\Projects\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.exe
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.dll
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\Iterum.csprojResolveAssemblyReference.cache
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.MacroForm.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.Properties.Resources.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\Iterum.csproj.GenerateResource.Cache
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.exe
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.dll
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\Iterum.csprojResolveAssemblyReference.cache
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.MacroForm.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.Properties.Resources.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\Iterum.csproj.GenerateResource.Cache
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<grammar version="1.0" xml:lang="en-EN" mode="voice" tag-format="semantics-ms/1.0"
+root="mouskie" xmlns="http://www.w3.org/2001/06/grammar">
+  <rule id="mouskie" scope="public">
+    <ruleref special="GARBAGE" />
+    <one-of>
+      <item>
+        <one-of>
+          <item>Ok Iterum</item>
+        </one-of>
+        <ruleref uri="#data_type" />
+        <tag>$.data_type=$data_type; $.mouskie={}; $.mouskie._value="LEARN";</tag>
+      </item>
+    </one-of>
+    <ruleref special="GARBAGE" />
+  </rule>
+  <rule id="data_type" scope="public">
+    <one-of>
+      <item>
+        <one-of>
+          <item>close</item>
+          <item>quit</item>
+          <item>exit</item>
+        </one-of>
+        <tag>$._value="EXIT";</tag>
+      </item>
+      <item>
+        <one-of>
+          <item>start</item>
+          <item>begin</item>
+        </one-of>
+        <tag>$._value="START";</tag>
+      </item>
+      <item>
+        <one-of>
+          <item>stop</item>
+        </one-of>
+        <tag>$._value="STOP";</tag>
+      </item>
+      <item>
+        <one-of>
+          <item>sleep</item>
+          <item>mute</item>
+        </one-of>
+        <tag>$._value="SLEEP";</tag>
+      </item>
+      <item>
+        <one-of>
+          <item>playback</item>
+          <item>replay</item>
+        </one-of>
+        <tag>$._value="PLAYBACK";</tag>
+        <ruleref uri="#numbers" />
+        <tag>$.numbers=$numbers;</tag>
+      </item>
+    </one-of>
+    <ruleref special="GARBAGE" />
+  </rule>
+  <rule id="numbers" scope="public">
+    <one-of>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+    </one-of>
+    <tag>$._value = $recognized.text;</tag>
+  </rule>
+</grammar>
