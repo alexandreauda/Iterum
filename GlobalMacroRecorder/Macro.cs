@@ -31,6 +31,8 @@ namespace GlobalMacroRecorder
         public EventArgs EventArgs;
         public int TimeSinceLastEvent;
 
+        public MacroEvent(){ }
+
         public MacroEvent(MacroEventType macroEventType, EventArgs eventArgs, int timeSinceLastEvent)
         {
 
