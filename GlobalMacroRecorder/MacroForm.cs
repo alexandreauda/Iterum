@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MouseKeyboardLibrary;
 using System.Threading;
 using System.Speech.Recognition;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace GlobalMacroRecorder
 {
@@ -498,6 +500,46 @@ namespace GlobalMacroRecorder
 
         #endregion
 
+        #region Methods to Import/Export Several Events
+        private void ImportSeveralEventsButton_Click(object sender, EventArgs e)
+        {
+            //Write Here
+        }
+
+        private void ExportSeveralEventsButton_Click(object sender, EventArgs e)
+        {
+            //if there are no events that have been created yet, we cannot export events. So, we create a error message box.
+            if (m_listevents.Count() == 0)
+            {
+                // Configure the message box to be displayed
+                string messageBoxText = "Cannot export events because there are no events that have been created yet. Create at least one event to be able to export events!";
+                string caption = "Action";
+                MessageBoxButtons button = MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Error;
+                MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the metod playBackMacroButton_Click fail
+            }
+            else
+            {
+                Stream streamToSerializeEvents;
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+                saveFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 1;
+                saveFileDialog1.RestoreDirectory = true;
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    if ((streamToSerializeEvents = saveFileDialog1.OpenFile()) != null)
+                    {
+                        // Code to write the stream goes here.
+                        XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEvent>>));
+                        eventSerialisation.Serialize(streamToSerializeEvents, m_listevents);
+                        streamToSerializeEvents.Close();
+                    }
+                }
+            }
+        }
+        #endregion
 
         #region Methods to check/uncheck a RadioButton by its event id
 

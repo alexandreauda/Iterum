@@ -37,6 +37,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ScrollPanel = new System.Windows.Forms.Panel();
             this.speechButton = new System.Windows.Forms.Button();
+            this.ImportSeveralEventsButton = new System.Windows.Forms.Button();
+            this.ExportSeveralEventsButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +93,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ScrollPanel);
-            this.groupBox1.Location = new System.Drawing.Point(13, 113);
+            this.groupBox1.Location = new System.Drawing.Point(10, 160);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(356, 177);
             this.groupBox1.TabIndex = 3;
@@ -116,11 +118,33 @@
             this.speechButton.UseVisualStyleBackColor = true;
             this.speechButton.Click += new System.EventHandler(this.speechButton_Click);
             // 
+            // ImportSeveralEventsButton
+            // 
+            this.ImportSeveralEventsButton.Location = new System.Drawing.Point(19, 118);
+            this.ImportSeveralEventsButton.Name = "ImportSeveralEventsButton";
+            this.ImportSeveralEventsButton.Size = new System.Drawing.Size(120, 36);
+            this.ImportSeveralEventsButton.TabIndex = 5;
+            this.ImportSeveralEventsButton.Text = "Import Several Events";
+            this.ImportSeveralEventsButton.UseVisualStyleBackColor = true;
+            this.ImportSeveralEventsButton.Click += new System.EventHandler(this.ImportSeveralEventsButton_Click);
+            // 
+            // ExportSeveralEventsButton
+            // 
+            this.ExportSeveralEventsButton.Location = new System.Drawing.Point(146, 119);
+            this.ExportSeveralEventsButton.Name = "ExportSeveralEventsButton";
+            this.ExportSeveralEventsButton.Size = new System.Drawing.Size(121, 35);
+            this.ExportSeveralEventsButton.TabIndex = 6;
+            this.ExportSeveralEventsButton.Text = "Export Several Events";
+            this.ExportSeveralEventsButton.UseVisualStyleBackColor = true;
+            this.ExportSeveralEventsButton.Click += new System.EventHandler(this.ExportSeveralEventsButton_Click);
+            // 
             // MacroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 298);
+            this.ClientSize = new System.Drawing.Size(378, 346);
+            this.Controls.Add(this.ExportSeveralEventsButton);
+            this.Controls.Add(this.ImportSeveralEventsButton);
             this.Controls.Add(this.speechButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -147,6 +171,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel ScrollPanel;
         private System.Windows.Forms.Button speechButton;
+        private System.Windows.Forms.Button ImportSeveralEventsButton;
+        private System.Windows.Forms.Button ExportSeveralEventsButton;
     }
 }
 
