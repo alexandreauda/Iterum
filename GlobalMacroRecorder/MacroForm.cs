@@ -531,9 +531,11 @@ namespace GlobalMacroRecorder
                 {
                     if ((streamToSerializeEvents = saveFileDialog1.OpenFile()) != null)
                     {
+                        Console.WriteLine(m_listevents);
                         // Code to write the stream goes here.
                         XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEvent>>));
                         eventSerialisation.Serialize(streamToSerializeEvents, m_listevents);
+                       
                         streamToSerializeEvents.Close();
                     }
                 }
