@@ -29,6 +29,9 @@ namespace GlobalMacroRecorder
 
         private MouseHook m_mouseHook;
         private KeyboardHook m_keyboardHook;
+
+        private List<List<MacroEventMouseSerializable>> m_listeventsSerializable;
+        private List<MacroEventMouseSerializable> m_eventsSerializable;
         #endregion
 
 
@@ -48,6 +51,9 @@ namespace GlobalMacroRecorder
             m_numberID = 0;
             m_speechRecognitionActivate = false;
             m_listOfRadioButton = new List<System.Windows.Forms.RadioButton>();
+
+            m_listeventsSerializable = new List<List<MacroEventMouseSerializable>>();
+            m_eventsSerializable = new List<MacroEventMouseSerializable>();
             #endregion
 
             #region Initialize member objects attributes
@@ -125,6 +131,9 @@ namespace GlobalMacroRecorder
         {
             m_events.Add(new MacroEvent(MacroEventType.MouseMove, e, Environment.TickCount - m_lastTimeRecorded));
             m_lastTimeRecorded = Environment.TickCount;
+            MouseEventArgsSerializable eSerializable = new MouseEventArgsSerializable(e.Button, e.Clicks, e.X, e.Y, e.Delta);
+            MacroEventMouseSerializable macroEventMouseSerializable = new MacroEventMouseSerializable(MacroEventType.MouseMove, eSerializable, Environment.TickCount - m_lastTimeRecorded);
+            m_eventsSerializable.Add(macroEventMouseSerializable);
         }
 
         //Record the clic down of mouse (press)
@@ -132,6 +141,8 @@ namespace GlobalMacroRecorder
         {
             m_events.Add(new MacroEvent(MacroEventType.MouseDown, e, Environment.TickCount - m_lastTimeRecorded));
             m_lastTimeRecorded = Environment.TickCount;
+            MouseEventArgsSerializable eSerializable = new MouseEventArgsSerializable(e.Button, e.Clicks, e.X, e.Y, e.Delta);
+            m_eventsSerializable.Add(new MacroEventMouseSerializable(MacroEventType.MouseDown, eSerializable, Environment.TickCount - m_lastTimeRecorded));
         }
 
         //Record the clic up of mouse (release)
@@ -139,6 +150,8 @@ namespace GlobalMacroRecorder
         {
             m_events.Add(new MacroEvent(MacroEventType.MouseUp, e, Environment.TickCount - m_lastTimeRecorded));
             m_lastTimeRecorded = Environment.TickCount;
+            MouseEventArgsSerializable eSerializable = new MouseEventArgsSerializable(e.Button, e.Clicks, e.X, e.Y, e.Delta);
+            m_eventsSerializable.Add(new MacroEventMouseSerializable(MacroEventType.MouseUp, eSerializable, Environment.TickCount - m_lastTimeRecorded));
         }
 
 
@@ -501,11 +514,15 @@ namespace GlobalMacroRecorder
         #endregion
 
         #region Methods to Import/Export Several Events
+
+        #region Methods to Import Several Events
         private void ImportSeveralEventsButton_Click(object sender, EventArgs e)
         {
             //Write Here
         }
+        #endregion
 
+        #region Methods to Export Several Events
         private void ExportSeveralEventsButton_Click(object sender, EventArgs e)
         {
             //if there are no events that have been created yet, we cannot export events. So, we create a error message box.
@@ -520,6 +537,12 @@ namespace GlobalMacroRecorder
             }
             else
             {
+                #region Add the last record to the list of events
+                //Add the last record to the m_listevents which contains the all lists of events.
+                List<MacroEventMouseSerializable> testEventsSerializable = new List<MacroEventMouseSerializable>(m_eventsSerializable);//Make a copy of list m_events called testEvents. So now, m_events=testEvents.
+                m_listeventsSerializable.Add(testEventsSerializable);//Add the list testEvents which is a copy of m_events and which contains the last record. We do a copy because otherwise, it is added by reference.
+                #endregion
+
                 Stream streamToSerializeEvents;
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
@@ -531,16 +554,18 @@ namespace GlobalMacroRecorder
                 {
                     if ((streamToSerializeEvents = saveFileDialog1.OpenFile()) != null)
                     {
-                        Console.WriteLine(m_listevents);
+                        Console.WriteLine(m_listeventsSerializable);
                         // Code to write the stream goes here.
-                        XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEvent>>));
-                        eventSerialisation.Serialize(streamToSerializeEvents, m_listevents);
+                        XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEventMouseSerializable>>));
+                        eventSerialisation.Serialize(streamToSerializeEvents, m_listeventsSerializable);
                        
                         streamToSerializeEvents.Close();
                     }
                 }
             }
         }
+        #endregion
+
         #endregion
 
         #region Methods to check/uncheck a RadioButton by its event id

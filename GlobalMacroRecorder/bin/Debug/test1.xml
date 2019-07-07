@@ -1,0 +1,1225 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfMacroEventMouseSerializable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfMacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>200</m_x>
+      <m_y>104</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>199</m_x>
+      <m_y>104</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>198</m_x>
+      <m_y>104</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>196</m_x>
+      <m_y>104</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>193</m_x>
+      <m_y>104</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>188</m_x>
+      <m_y>105</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>183</m_x>
+      <m_y>106</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>177</m_x>
+      <m_y>106</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>172</m_x>
+      <m_y>107</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>166</m_x>
+      <m_y>108</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>159</m_x>
+      <m_y>109</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>153</m_x>
+      <m_y>110</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>149</m_x>
+      <m_y>111</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>145</m_x>
+      <m_y>112</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>142</m_x>
+      <m_y>112</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>139</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>137</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>135</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>133</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>133</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>131</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>131</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>130</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>130</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>129</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>128</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>128</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseDown</MacroEventType>
+      <MouseEventArgs />
+      <m_button>Left</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>128</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>128</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>127</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>123</m_x>
+      <m_y>117</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>119</m_x>
+      <m_y>120</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>114</m_x>
+      <m_y>124</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>110</m_x>
+      <m_y>126</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>106</m_x>
+      <m_y>130</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>102</m_x>
+      <m_y>133</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>99</m_x>
+      <m_y>135</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>96</m_x>
+      <m_y>138</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>94</m_x>
+      <m_y>140</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>93</m_x>
+      <m_y>141</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>91</m_x>
+      <m_y>142</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>90</m_x>
+      <m_y>143</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>89</m_x>
+      <m_y>144</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>89</m_x>
+      <m_y>145</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>88</m_x>
+      <m_y>145</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseUp</MacroEventType>
+      <MouseEventArgs />
+      <m_button>Left</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>88</m_x>
+      <m_y>145</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>88</m_x>
+      <m_y>145</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>89</m_x>
+      <m_y>144</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>90</m_x>
+      <m_y>143</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>94</m_x>
+      <m_y>141</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>98</m_x>
+      <m_y>139</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>107</m_x>
+      <m_y>135</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>115</m_x>
+      <m_y>132</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>125</m_x>
+      <m_y>129</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>134</m_x>
+      <m_y>126</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>144</m_x>
+      <m_y>124</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>154</m_x>
+      <m_y>122</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>162</m_x>
+      <m_y>120</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>170</m_x>
+      <m_y>119</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>176</m_x>
+      <m_y>117</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>180</m_x>
+      <m_y>116</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>184</m_x>
+      <m_y>116</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>187</m_x>
+      <m_y>115</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>189</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>191</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>192</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>193</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>193</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>194</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>194</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>195</m_x>
+      <m_y>114</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>195</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>196</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>196</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>197</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>197</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>198</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>198</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>199</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>200</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>201</m_x>
+      <m_y>113</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>202</m_x>
+      <m_y>112</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>203</m_x>
+      <m_y>112</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>205</m_x>
+      <m_y>112</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>207</m_x>
+      <m_y>112</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>208</m_x>
+      <m_y>111</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>209</m_x>
+      <m_y>111</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>211</m_x>
+      <m_y>111</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>211</m_x>
+      <m_y>110</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>212</m_x>
+      <m_y>110</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>214</m_x>
+      <m_y>109</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>215</m_x>
+      <m_y>109</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>217</m_x>
+      <m_y>108</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>219</m_x>
+      <m_y>108</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>220</m_x>
+      <m_y>107</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>221</m_x>
+      <m_y>107</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>223</m_x>
+      <m_y>107</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>224</m_x>
+      <m_y>106</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>225</m_x>
+      <m_y>106</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>227</m_x>
+      <m_y>105</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>228</m_x>
+      <m_y>105</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>229</m_x>
+      <m_y>104</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>231</m_x>
+      <m_y>104</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>232</m_x>
+      <m_y>103</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>233</m_x>
+      <m_y>102</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>235</m_x>
+      <m_y>102</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>237</m_x>
+      <m_y>102</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>238</m_x>
+      <m_y>101</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>240</m_x>
+      <m_y>101</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>241</m_x>
+      <m_y>100</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>243</m_x>
+      <m_y>100</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>245</m_x>
+      <m_y>99</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>246</m_x>
+      <m_y>98</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>247</m_x>
+      <m_y>98</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>249</m_x>
+      <m_y>98</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>250</m_x>
+      <m_y>97</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>250</m_x>
+      <m_y>97</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>251</m_x>
+      <m_y>97</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>252</m_x>
+      <m_y>96</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseMove</MacroEventType>
+      <MouseEventArgs />
+      <m_button>None</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>253</m_x>
+      <m_y>96</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseDown</MacroEventType>
+      <MouseEventArgs />
+      <m_button>Left</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>253</m_x>
+      <m_y>96</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+    <MacroEventMouseSerializable>
+      <MacroEventType>MouseUp</MacroEventType>
+      <MouseEventArgs />
+      <m_button>Left</m_button>
+      <m_clicks>1</m_clicks>
+      <m_x>253</m_x>
+      <m_y>96</m_y>
+      <m_delta>0</m_delta>
+      <TimeSinceLastEvent>0</TimeSinceLastEvent>
+    </MacroEventMouseSerializable>
+  </ArrayOfMacroEventMouseSerializable>
+</ArrayOfArrayOfMacroEventMouseSerializable>

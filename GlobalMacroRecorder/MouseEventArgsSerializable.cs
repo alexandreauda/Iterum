@@ -12,7 +12,7 @@ using System.Drawing;
 namespace GlobalMacroRecorder
 {
     [Serializable]
-    class MouseEventArgsSerializable
+    public class MouseEventArgsSerializable
     {
         #region ATTRIBUTES
         /****************** ATTRIBUTES ******************/
@@ -27,6 +27,8 @@ namespace GlobalMacroRecorder
 
         #region CONSTRUCTOR
         /****************** CONSTRUCTOR ******************/
+        public MouseEventArgsSerializable() { }
+
         // Constructor of MouseEventArgsSerializable
         public MouseEventArgsSerializable(MouseButtons button, int clicks, int x, int y, int delta)
         {
