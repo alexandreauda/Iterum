@@ -160,6 +160,8 @@ namespace GlobalMacroRecorder
         {
             m_events.Add(new MacroEvent(MacroEventType.KeyDown, e, Environment.TickCount - m_lastTimeRecorded));
             m_lastTimeRecorded = Environment.TickCount;
+            KeysEventArgsSerializable eSerializable = new KeysEventArgsSerializable(e.KeyData);
+            m_eventsSerializable.Add(new MacroEventMouseSerializable(MacroEventType.KeyDown, eSerializable, Environment.TickCount - m_lastTimeRecorded));
         }
 
 
@@ -168,6 +170,8 @@ namespace GlobalMacroRecorder
         {
             m_events.Add(new MacroEvent(MacroEventType.KeyUp, e, Environment.TickCount - m_lastTimeRecorded));
             m_lastTimeRecorded = Environment.TickCount;
+            KeysEventArgsSerializable eSerializable = new KeysEventArgsSerializable(e.KeyData);
+            m_eventsSerializable.Add(new MacroEventMouseSerializable(MacroEventType.KeyUp, eSerializable, Environment.TickCount - m_lastTimeRecorded));
         }
 
         #endregion

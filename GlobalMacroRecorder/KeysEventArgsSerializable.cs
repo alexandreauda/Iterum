@@ -2,44 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Speech.Recognition.SrgsGrammar;
+using System.Speech.Recognition;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
+using System.Drawing;
 
 namespace GlobalMacroRecorder
 {
-    /// <summary>
-    /// Series of events that can be recorded any played back
-    /// </summary>
     [Serializable]
-    public class MacroEventMouseSerializable
+    public class KeysEventArgsSerializable
     {
         #region ATTRIBUTES
-        public MacroEventType MacroEventType;
-
-        #region MouseEvent Attributes
-        public MouseEventArgsSerializable MouseEventArgs;
-        public MouseButtons m_button;
-        public int m_clicks;
-        public int m_x;
-        public int m_y;
-        public int m_delta;
-        #endregion
-
-        #region KeyEvent Attributes
-        public KeysEventArgsSerializable KeyEventArgs;
+        /****************** ATTRIBUTES ******************/
         //
         // Résumé :
         //     Obtient une valeur indiquant si la touche ALT a été activée.
         //
         // Retourne :
         //     true si la touche ALT était activée ; sinon, false.
-        public virtual bool m_Alt { get; }
+        public virtual bool m_Alt { get; set; }
         //
         // Résumé :
         //     Obtient une valeur indiquant si la touche CTRL a été activée.
         //
         // Retourne :
         //     true si la touche CTRL était activée ; sinon, false.
-        public bool m_Control { get; }
+        public bool m_Control { get; set; }
         //
         // Résumé :
         //     Obtient ou définit une valeur indiquant si l'événement a été géré.
@@ -55,7 +45,7 @@ namespace GlobalMacroRecorder
         //
         // Retourne :
         //     Une valeur System.Windows.Forms.Keys représentant le code de touche pour l'événement.
-        public Keys m_KeyCode { get; }
+        public Keys m_KeyCode { get; set; }
         //
         // Résumé :
         //     Obtient la valeur de clavier d'un événement System.Windows.Forms.Control.KeyDown
@@ -63,7 +53,7 @@ namespace GlobalMacroRecorder
         //
         // Retourne :
         //     La représentation sous forme d'entier de la propriété System.Windows.Forms.KeyEventArgs.KeyCode.
-        public int m_KeyValue { get; }
+        public int m_KeyValue { get; set; }
         //
         // Résumé :
         //     Obtient les données de touches d'un événement System.Windows.Forms.Control.KeyDown
@@ -73,7 +63,7 @@ namespace GlobalMacroRecorder
         //     System.Windows.Forms.Keys représentant le code de touche correspondant à la touche
         //     activée, associée à des indicateurs de touches de modification précisant les
         //     touches CTRL, MAJ et ALT sur lesquelles l'utilisateur a appuyé simultanément.
-        public Keys m_KeyData { get; }
+        public Keys m_KeyData { get; set; }
         //
         // Résumé :
         //     Obtient les indicateurs de touches de modification d'un événement System.Windows.Forms.Control.KeyDown
@@ -83,14 +73,14 @@ namespace GlobalMacroRecorder
         // Retourne :
         //     Une valeur System.Windows.Forms.Keys représentant un ou plusieurs indicateurs
         //     de touches de modification.
-        public Keys m_Modifiers { get; }
+        public Keys m_Modifiers { get; set; }
         //
         // Résumé :
         //     Obtient une valeur indiquant si la touche MAJ a été activée.
         //
         // Retourne :
         //     true si la touche MAJ était activée ; sinon, false.
-        public virtual bool m_Shift { get; }
+        public virtual bool m_Shift { get; set; }
         //
         // Résumé :
         //     Obtient ou définit une valeur indiquant si l'événement de touche doit être transmis
@@ -102,42 +92,41 @@ namespace GlobalMacroRecorder
         public bool m_SuppressKeyPress { get; set; }
         #endregion
 
-        public int TimeSinceLastEvent;
+
+        #region CONSTRUCTOR
+        /****************** CONSTRUCTOR ******************/
+        public KeysEventArgsSerializable() { }
+
+        //
+        // Résumé :
+        //     Initialise une nouvelle instance de la classe System.Windows.Forms.KeyEventArgs.
+        //
+        // Paramètres :
+        //   keyData:
+        //     System.Windows.Forms.Keys correspondant à la touche activée, associée à des indicateurs
+        //     de touches de modification précisant les touches CTRL, MAJ et ALT sur lesquelles
+        //     l'utilisateur a appuyé simultanément. Les valeurs possibles sont obtenues en
+        //     appliquant l'opérateur de bits OR (|) à des constantes à partir de l'énumération
+        //     System.Windows.Forms.Keys.
+        public KeysEventArgsSerializable(Keys keyData)
+        {
+            m_KeyData = keyData;
+        }
         #endregion
 
-        public MacroEventMouseSerializable() { }
 
-        public MacroEventMouseSerializable(MacroEventType macroEventType, MouseEventArgsSerializable eventArgs, int timeSinceLastEvent)
+        #region METHODS
+
+        /****************** METHODS ******************/
+        #region Methods 1
+        // Methods 1
+        private void method1(object sender, SpeechHypothesizedEventArgs e)
         {
-
-            MacroEventType = macroEventType;
-            MouseEventArgs = eventArgs;
-            m_button = MouseEventArgs.getm_button();
-            m_clicks = MouseEventArgs.getm_clicks();
-            m_x = MouseEventArgs.getm_x();
-            m_y = MouseEventArgs.getm_y();
-            m_delta = MouseEventArgs.getm_delta();
-            TimeSinceLastEvent = timeSinceLastEvent;
-
+            //Write here
         }
+        #endregion
 
-        public MacroEventMouseSerializable(MacroEventType macroEventType, KeysEventArgsSerializable eventArgs, int timeSinceLastEvent)
-        {
-
-            MacroEventType = macroEventType;
-            KeyEventArgs = eventArgs;
-            m_Alt = eventArgs.m_Alt;
-            m_Control = eventArgs.m_Control;
-            m_Handled = eventArgs.m_Handled;
-            m_KeyCode = eventArgs.m_KeyCode;
-            m_KeyValue = eventArgs.m_KeyValue;
-            m_KeyData = eventArgs.m_KeyData;
-            m_Modifiers = eventArgs.m_Modifiers;
-            m_Shift = eventArgs.m_Shift;
-            m_SuppressKeyPress = eventArgs.m_SuppressKeyPress;
-            TimeSinceLastEvent = timeSinceLastEvent;
-
-        }
-
+        #endregion
     }
+
 }
