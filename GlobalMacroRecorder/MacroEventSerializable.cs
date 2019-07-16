@@ -10,7 +10,7 @@ namespace GlobalMacroRecorder
     /// Series of events that can be recorded any played back
     /// </summary>
     [Serializable]
-    public class MacroEventMouseSerializable
+    public class MacroEventSerializable
     {
         #region ATTRIBUTES
         public MacroEventType MacroEventType;
@@ -105,9 +105,9 @@ namespace GlobalMacroRecorder
         public int TimeSinceLastEvent;
         #endregion
 
-        public MacroEventMouseSerializable() { }
+        public MacroEventSerializable() { }
 
-        public MacroEventMouseSerializable(MacroEventType macroEventType, MouseEventArgsSerializable eventArgs, int timeSinceLastEvent)
+        public MacroEventSerializable(MacroEventType macroEventType, MouseEventArgsSerializable eventArgs, int timeSinceLastEvent)
         {
 
             MacroEventType = macroEventType;
@@ -121,7 +121,7 @@ namespace GlobalMacroRecorder
 
         }
 
-        public MacroEventMouseSerializable(MacroEventType macroEventType, KeysEventArgsSerializable eventArgs, int timeSinceLastEvent)
+        public MacroEventSerializable(MacroEventType macroEventType, KeysEventArgsSerializable eventArgs, int timeSinceLastEvent)
         {
 
             MacroEventType = macroEventType;
