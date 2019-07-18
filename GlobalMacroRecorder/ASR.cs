@@ -120,6 +120,7 @@ namespace GlobalMacroRecorder
                 //if the second key words has a associate value equal to "STOP" (in the grammar loaded)
                 else if (dataType.Equals("STOP"))
                 {
+                    m_mainWindowIterum.Activate();
                     m_mainWindowIterum.recordStopButton_Click(null, EventArgs.Empty);//Call the method called by the stop button
                 }
                 //if the second key words has a associate value equal to "SLEEP" (in the grammar loaded)

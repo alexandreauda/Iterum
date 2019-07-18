@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASR.cs" />
-    <Compile Include="MacroEventMouseSerializable.cs" />
+    <Compile Include="MacroEventSerializable.cs" />
     <Compile Include="KeysEventArgsSerializable.cs" />
     <Compile Include="MouseEventArgsSerializable.cs" />
     <Compile Include="MacroForm.cs">
