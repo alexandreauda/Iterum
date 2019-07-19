@@ -634,12 +634,6 @@ namespace GlobalMacroRecorder
                     #endregion
 
                     streamToDeserializeEvents.Close();
-
-                    /********* TEST/DEBUG SECTION **********/
-                    List<List<MacroEvent>> listEventsTest = new List<List<MacroEvent>>();
-                    listEventsTest.Equals(m_listevents);
-                    listEventsImported.Equals(m_listeventsSerializable);
-                    /***************************************/
                 }
             }
         }
