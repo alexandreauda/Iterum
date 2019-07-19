@@ -32,14 +32,14 @@ namespace GlobalMacroRecorder
         //
         // Retourne :
         //     true si la touche ALT était activée ; sinon, false.
-        public virtual bool m_Alt { get; }
+        public bool m_Alt;
         //
         // Résumé :
         //     Obtient une valeur indiquant si la touche CTRL a été activée.
         //
         // Retourne :
         //     true si la touche CTRL était activée ; sinon, false.
-        public bool m_Control { get; }
+        public bool m_Control;
         //
         // Résumé :
         //     Obtient ou définit une valeur indiquant si l'événement a été géré.
@@ -47,7 +47,7 @@ namespace GlobalMacroRecorder
         // Retourne :
         //     true pour ignorer la gestion par défaut du contrôle ; sinon, false pour également
         //     passer l'événement au gestionnaire de contrôle par défaut.
-        public bool m_Handled { get; set; }
+        public bool m_Handled;
         //
         // Résumé :
         //     Obtient le code de clavier d'un événement System.Windows.Forms.Control.KeyDown
@@ -55,7 +55,7 @@ namespace GlobalMacroRecorder
         //
         // Retourne :
         //     Une valeur System.Windows.Forms.Keys représentant le code de touche pour l'événement.
-        public Keys m_KeyCode { get; }
+        public Keys m_KeyCode;
         //
         // Résumé :
         //     Obtient la valeur de clavier d'un événement System.Windows.Forms.Control.KeyDown
@@ -63,7 +63,7 @@ namespace GlobalMacroRecorder
         //
         // Retourne :
         //     La représentation sous forme d'entier de la propriété System.Windows.Forms.KeyEventArgs.KeyCode.
-        public int m_KeyValue { get; }
+        public int m_KeyValue;
         //
         // Résumé :
         //     Obtient les données de touches d'un événement System.Windows.Forms.Control.KeyDown
@@ -83,14 +83,14 @@ namespace GlobalMacroRecorder
         // Retourne :
         //     Une valeur System.Windows.Forms.Keys représentant un ou plusieurs indicateurs
         //     de touches de modification.
-        public Keys m_Modifiers { get; }
+        public Keys m_Modifiers;
         //
         // Résumé :
         //     Obtient une valeur indiquant si la touche MAJ a été activée.
         //
         // Retourne :
         //     true si la touche MAJ était activée ; sinon, false.
-        public virtual bool m_Shift { get; }
+        public bool m_Shift;
         //
         // Résumé :
         //     Obtient ou définit une valeur indiquant si l'événement de touche doit être transmis
@@ -99,7 +99,7 @@ namespace GlobalMacroRecorder
         // Retourne :
         //     true si l'événement de touche ne doit pas être transmis au contrôle ; sinon,
         //     false.
-        public bool m_SuppressKeyPress { get; set; }
+        public bool m_SuppressKeyPress;
         #endregion
 
         public int TimeSinceLastEvent;
@@ -126,15 +126,15 @@ namespace GlobalMacroRecorder
 
             MacroEventType = macroEventType;
             KeyEventArgs = eventArgs;
-            m_Alt = eventArgs.m_Alt;
-            m_Control = eventArgs.m_Control;
-            m_Handled = eventArgs.m_Handled;
-            m_KeyCode = eventArgs.m_KeyCode;
-            m_KeyValue = eventArgs.m_KeyValue;
+            m_Alt = eventArgs.getm_Alt();
+            m_Control = eventArgs.getm_Control();
+            m_Handled = eventArgs.getm_Handled();
+            m_KeyCode = eventArgs.getm_KeyCode();
+            m_KeyValue = eventArgs.getm_KeyValue();
             m_KeyData = eventArgs.getm_KeyData();
-            m_Modifiers = eventArgs.m_Modifiers;
-            m_Shift = eventArgs.m_Shift;
-            m_SuppressKeyPress = eventArgs.m_SuppressKeyPress;
+            m_Modifiers = eventArgs.getm_Modifiers();
+            m_Shift = eventArgs.getm_Shift();
+            m_SuppressKeyPress = eventArgs.getm_SuppressKeyPress();
             TimeSinceLastEvent = timeSinceLastEvent;
 
         }
