@@ -391,6 +391,13 @@ namespace GlobalMacroRecorder
             List<MacroEvent> testEvents = new List<MacroEvent>(m_events);//Make a copy of list m_events called testEvents. So now, m_events=testEvents.
             m_listevents.Add(testEvents);//Add the list testEvents which is a copy of m_events and which contains the last record. We do a copy because otherwise, it is added by reference.
             #endregion
+
+            #region Add the last record to the list of events serializable
+            //Add the last record to the m_listeventsSerializable which contains the all lists of events.
+            List<MacroEventSerializable> testEventsSerializable = new List<MacroEventSerializable>(m_eventsSerializable);//Make a copy of list m_events called testEvents. So now, m_events=testEvents.
+            m_listeventsSerializable.Add(testEventsSerializable);//Add the list testEvents which is a copy of m_events and which contains the last record. We do a copy because otherwise, it is added by reference.
+            m_eventsSerializable.Clear();
+            #endregion
         }
 
 
@@ -539,28 +546,100 @@ namespace GlobalMacroRecorder
                     // Code to write the stream goes here.
                     XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEventSerializable>>));
                     List<List<MacroEventSerializable>> listEventsImported = (List<List<MacroEventSerializable>>) eventSerialisation.Deserialize(streamToDeserializeEvents);
-                    if (listEventsImported == m_listeventsSerializable)
+
+                    for(int i=0; i<listEventsImported.Count; i++)
                     {
-                        // Configure the message box to be displayed
-                        string messageBoxText = "listEventsImported == m_listeventsSerializable";
-                        string caption = "Action";
-                        MessageBoxButtons button = MessageBoxButtons.OK;
-                        MessageBoxIcon icon = MessageBoxIcon.Error;
-                        MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the metod playBackMacroButton_Click fail
+                        List<MacroEvent> listMacroEventRecreated = new List<MacroEvent>();
+                        for (int j = 0; j < listEventsImported[i].Count; j++)
+                        {
+                            EventArgs currentMacroEvent;
+                            //if the Event is a Mouse action
+                            if(listEventsImported[i][j].MacroEventType != MacroEventType.KeyDown && listEventsImported[i][j].MacroEventType != MacroEventType.KeyUp)
+                            {
+                                currentMacroEvent = new MouseEventArgs(listEventsImported[i][j].m_button, listEventsImported[i][j].m_clicks, listEventsImported[i][j].m_x, listEventsImported[i][j].m_y, listEventsImported[i][j].m_delta);
+                            }
+                            //if the Event is a Keyboard action
+                            else
+                            {
+                                currentMacroEvent = new KeyEventArgs(listEventsImported[i][j].m_KeyData);
+                            }
+                            MacroEvent currentEvent = new MacroEvent(listEventsImported[i][j].MacroEventType, currentMacroEvent, listEventsImported[i][j].TimeSinceLastEvent);
+                            listMacroEventRecreated.Add(currentEvent);
+                        }
+                        m_listevents.Add(listMacroEventRecreated);
                     }
-                    else
+
+                    #region For each Event imported, create a new RadioButton dynamically
+                    if (m_numberID == 0)
                     {
-                        List<List<MacroEvent>> listEventsTest = new List<List<MacroEvent>>();
-                        listEventsTest.Equals(m_listevents);
-                        listEventsImported.Equals(m_listeventsSerializable);
-                        // Configure the message box to be displayed
-                        string messageBoxText = "listEventsImported != m_listeventsSerializable";
-                        string caption = "Action";
-                        MessageBoxButtons button = MessageBoxButtons.OK;
-                        MessageBoxIcon icon = MessageBoxIcon.Error;
-                        MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the metod playBackMacroButton_Click fail
+                        #region Enable playBackMacroButton Button
+                        playBackMacroButton.Enabled = true;//Enable playBackMacroButton Button
+                        #endregion
                     }
+                    //For each Event imported, create a new RadioButton dynamically
+                    for (int i = 0; i<listEventsImported.Count; i++)
+                    {
+                        #region Create new RadioButton dynamically for the event that we import
+
+                        #region Create new RadioButton variable, set it is name dynamically and update variable
+                        //Create new RadioButton dynamically for the event that we import
+                        m_numberID++;//Increment the number of event
+                        System.Windows.Forms.RadioButton radb = new System.Windows.Forms.RadioButton();//Create a RadioButton
+                        radb.Text = "Event" + m_numberID;//Set the text of RadioButton with the name Event following by the number of events
+                        Point lastLocationRadioButton = new System.Drawing.Point(0, 0);//Create a variable of type Point
+                        #endregion
+
+                        #region Uncheck all Radio button and check the last Radio button that we want to add dynamically
+                        //For each component in ScrollPanel of FormModePersonalize Form, we uncheck all Radio button
+                        foreach (object o in ScrollPanel.Controls)
+                        {
+                            //If the component is a RadioButton (i.e: If the type of component is a RadioButton).
+                            if (o is System.Windows.Forms.RadioButton)
+                            {
+                                System.Windows.Forms.RadioButton currentRadioButton = (System.Windows.Forms.RadioButton)o;//Stock the component (which is a RadioButton) on a variable called currentRadioButton.
+                                lastLocationRadioButton = currentRadioButton.Location;//Set the variable lastLocationRadioButton with the location of the current RadioButton.
+                                                                                      //If the current RadioButton is checked
+                                if (currentRadioButton.Checked == true)
+                                {
+                                    currentRadioButton.Checked = false;//Uncheck all Radio button exept the last one.
+                                }
+                            }
+                        }
+                        radb.Checked = true;//Check the last Radio button
+                        #endregion
+
+                        #region Set the position of the new Radio button
+                        //If it is the first record
+                        if (m_numberID == 1)
+                        {
+                            radb.Location = new System.Drawing.Point(10, 0);//Set the position of RadioButton in the FormModePersonalize Form
+                        }
+                        //If it is not the first record
+                        else
+                        {
+                            radb.Location = new System.Drawing.Point(10, lastLocationRadioButton.Y + 30);//Set the position of RadioButton in the FormModePersonalize Form
+                        }
+                        #endregion
+
+                        #region Add the new Radio button to the ScrollPanel
+                        ScrollPanel.Controls.Add(radb);//Add RadioButton in panel called ScrollPanel in FormModePersonalize Form
+                        #endregion
+
+                        #region Add the new Radio button to the list m_listOfRadioButton
+                        m_listOfRadioButton.Add(radb);//Add the new Radio button to the list m_listOfRadioButton
+                        #endregion
+
+                        #endregion
+                    }
+                    #endregion
+
                     streamToDeserializeEvents.Close();
+
+                    /********* TEST/DEBUG SECTION **********/
+                    List<List<MacroEvent>> listEventsTest = new List<List<MacroEvent>>();
+                    listEventsTest.Equals(m_listevents);
+                    listEventsImported.Equals(m_listeventsSerializable);
+                    /***************************************/
                 }
             }
         }
@@ -581,12 +660,6 @@ namespace GlobalMacroRecorder
             }
             else
             {
-                #region Add the last record to the list of events
-                //Add the last record to the m_listevents which contains the all lists of events.
-                List<MacroEventSerializable> testEventsSerializable = new List<MacroEventSerializable>(m_eventsSerializable);//Make a copy of list m_events called testEvents. So now, m_events=testEvents.
-                m_listeventsSerializable.Add(testEventsSerializable);//Add the list testEvents which is a copy of m_events and which contains the last record. We do a copy because otherwise, it is added by reference.
-                #endregion
-
                 Stream streamToSerializeEvents;
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 

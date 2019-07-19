@@ -63,7 +63,7 @@ namespace GlobalMacroRecorder
         //     System.Windows.Forms.Keys représentant le code de touche correspondant à la touche
         //     activée, associée à des indicateurs de touches de modification précisant les
         //     touches CTRL, MAJ et ALT sur lesquelles l'utilisateur a appuyé simultanément.
-        public Keys m_KeyData { get; set; }
+        private Keys m_KeyData;
         //
         // Résumé :
         //     Obtient les indicateurs de touches de modification d'un événement System.Windows.Forms.Control.KeyDown
@@ -114,6 +114,23 @@ namespace GlobalMacroRecorder
         }
         #endregion
 
+        #region GETTER
+        /****************** GETTER ******************/
+        //Get the attribute m_KeyData
+        public Keys getm_KeyData()
+        {
+            return m_KeyData;//Return the attribute m_KeyData
+        }
+        #endregion
+
+        #region SETTER
+        /****************** SETTER ******************/
+        //Set the attribute m_KeyData
+        public void setm_KeyData(Keys KeyData)
+        {
+            m_KeyData = KeyData;//Set the attribute m_KeyData
+        }
+        #endregion
 
         #region METHODS
 

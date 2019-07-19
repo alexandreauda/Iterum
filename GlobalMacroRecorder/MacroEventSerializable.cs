@@ -73,7 +73,7 @@ namespace GlobalMacroRecorder
         //     System.Windows.Forms.Keys représentant le code de touche correspondant à la touche
         //     activée, associée à des indicateurs de touches de modification précisant les
         //     touches CTRL, MAJ et ALT sur lesquelles l'utilisateur a appuyé simultanément.
-        public Keys m_KeyData { get; }
+        public Keys m_KeyData;
         //
         // Résumé :
         //     Obtient les indicateurs de touches de modification d'un événement System.Windows.Forms.Control.KeyDown
@@ -131,7 +131,7 @@ namespace GlobalMacroRecorder
             m_Handled = eventArgs.m_Handled;
             m_KeyCode = eventArgs.m_KeyCode;
             m_KeyValue = eventArgs.m_KeyValue;
-            m_KeyData = eventArgs.m_KeyData;
+            m_KeyData = eventArgs.getm_KeyData();
             m_Modifiers = eventArgs.m_Modifiers;
             m_Shift = eventArgs.m_Shift;
             m_SuppressKeyPress = eventArgs.m_SuppressKeyPress;
