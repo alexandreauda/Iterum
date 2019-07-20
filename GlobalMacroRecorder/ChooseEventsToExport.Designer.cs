@@ -1,6 +1,6 @@
 ﻿namespace GlobalMacroRecorder
 {
-    partial class ChooseEventToImported
+    partial class ChooseEventsToExport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseEventToImported));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseEventsToExport));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ScrollPanel = new System.Windows.Forms.Panel();
             this.checkAllButton = new System.Windows.Forms.Button();

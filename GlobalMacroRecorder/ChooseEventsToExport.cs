@@ -15,7 +15,7 @@ using System.Xml.Serialization;
 
 namespace GlobalMacroRecorder
 {
-    public partial class ChooseEventToImported : Form
+    public partial class ChooseEventsToExport : Form
     {
         #region ATTRIBUTES
         /****************** ATTRIBUTES ******************/
@@ -28,7 +28,7 @@ namespace GlobalMacroRecorder
 
         #region CONSTRUCTOR
         /****************** CONSTRUCTOR ******************/
-        public ChooseEventToImported(MacroForm MacroForm)
+        public ChooseEventsToExport(MacroForm MacroForm)
         {
             InitializeComponent();//Initialize the Form
 
@@ -57,7 +57,7 @@ namespace GlobalMacroRecorder
                 #endregion
 
                 #region Store in the variable lastLocationCheckBox the location of the last CheckBox.
-                //For each component in ScrollPanel of ChooseEventToImported Form, we store the last location of checkbox
+                //For each component in ScrollPanel of ChooseEventsToExport Form, we store the last location of checkbox
                 foreach (object o in ScrollPanel.Controls)
                 {
                     //If the component is a RadioButton (i.e: If the type of component is a CheckBox).
@@ -73,19 +73,19 @@ namespace GlobalMacroRecorder
                 //If it is the first record
                 if (m_numberID == 1)
                 {
-                    radb.Location = new System.Drawing.Point(10, 0);//Set the position of CheckBox in the ChooseEventToImported Form
+                    radb.Location = new System.Drawing.Point(10, 0);//Set the position of CheckBox in the chooseEventsToExport Form
                 }
                 //If it is not the first record
                 else
                 {
-                    radb.Location = new System.Drawing.Point(10, lastLocationCheckBox.Y + 30);//Set the position of CheckBox in the ChooseEventToImported Form
+                    radb.Location = new System.Drawing.Point(10, lastLocationCheckBox.Y + 30);//Set the position of CheckBox in the chooseEventsToExport Form
                 }
                 #endregion
 
                 radb.Checked = true;//Check current CheckBox.
 
                 #region Add the new CheckBox to the ScrollPanel
-                ScrollPanel.Controls.Add(radb);//Add CheckBox in panel called ScrollPanel in ChooseEventToImported Form
+                ScrollPanel.Controls.Add(radb);//Add CheckBox in panel called ScrollPanel in ChooseEventsToExport Form
                 #endregion
 
                 #region Add the new CheckBox to the list m_listOfCheckBox
@@ -160,7 +160,7 @@ namespace GlobalMacroRecorder
         private void checkAllButton_Click(object sender, EventArgs e)
         {
             #region Check all CheckBox
-            //For each component in ScrollPanel of ChooseEventToImported Form, we check all CheckBox
+            //For each component in ScrollPanel of ChooseEventsToExport Form, we check all CheckBox
             foreach (object o in ScrollPanel.Controls)
             {
                 //If the component is a CheckBox (i.e: If the type of component is a CheckBox).
@@ -180,7 +180,7 @@ namespace GlobalMacroRecorder
         private void uncheckAllButton_Click(object sender, EventArgs e)
         {
             #region Uncheck all CheckBox
-            //For each component in ScrollPanel of ChooseEventToImported Form, we uncheck all CheckBox
+            //For each component in ScrollPanel of ChooseEventsToExport Form, we uncheck all CheckBox
             foreach (object o in ScrollPanel.Controls)
             {
                 //If the component is a CheckBox (i.e: If the type of component is a CheckBox).
@@ -200,14 +200,14 @@ namespace GlobalMacroRecorder
         private void cancelButton_Click(object sender, EventArgs e)
         {
             m_MacroForm.setm_importEventsConfiration(false);//Set the m_importEventsConfiration attribute of the MacroForm m_MacroForm to false.
-            this.Close();//Close the ChooseEventToImport Form
+            this.Close();//Close the ChooseEventsToExport Form
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
             #region Verify the CheckBox which are checked and store the id of CheckBox which are checked
             int idOfCheckBox = 0;
-            //For each component in ScrollPanel of ChooseEventToImported Form, store the id of CheckBox which are checked
+            //For each component in ScrollPanel of ChooseEventsToExport Form, store the id of CheckBox which are checked
             foreach (object o in ScrollPanel.Controls)
             {
                 //If the component is a CheckBox (i.e: If the type of component is a CheckBox).
@@ -224,7 +224,7 @@ namespace GlobalMacroRecorder
             }
             #endregion
             m_MacroForm.setm_importEventsConfiration(true);//Set the m_importEventsConfiration attribute of the MacroForm m_MacroForm to true.
-            this.Close();//Close the ChooseEventToImport Form
+            this.Close();//Close the ChooseEventsToExport Form
         }
     }
 }

@@ -679,10 +679,10 @@ namespace GlobalMacroRecorder
             }
             else
             {
-                #region Create a chooseEventToImported Form to choose which events the user want import
-                //Create a chooseEventToImported Form to choose which events the user want import.
-                ChooseEventToImported chooseEventToImported = new ChooseEventToImported(this);//Create a chooseEventToImported Form to choose which events the user want import.
-                chooseEventToImported.ShowDialog();//Show in modal mode the chooseEventToImported Form.
+                #region Create a chooseEventsToExport Form to choose which events the user want export
+                //Create a chooseEventsToExport Form to choose which events the user want import.
+                ChooseEventsToExport chooseEventsToExport = new ChooseEventsToExport(this);//Create a chooseEventsToExport Form to choose which events the user want import.
+                chooseEventsToExport.ShowDialog();//Show in modal mode the chooseEventsToExport Form.
                 #endregion
 
                 #region Import the chosen events.
