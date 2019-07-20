@@ -57,6 +57,12 @@
     <Compile Include="ASR.cs" />
     <Compile Include="MacroEventSerializable.cs" />
     <Compile Include="KeysEventArgsSerializable.cs" />
+    <Compile Include="ChooseEventToImported.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseEventToImported.Designer.cs">
+      <DependentUpon>ChooseEventToImported.cs</DependentUpon>
+    </Compile>
     <Compile Include="MouseEventArgsSerializable.cs" />
     <Compile Include="MacroForm.cs">
       <SubType>Form</SubType>
@@ -67,6 +73,10 @@
     <Compile Include="Macro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChooseEventToImported.resx">
+      <DependentUpon>ChooseEventToImported.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MacroForm.resx">
       <DependentUpon>MacroForm.cs</DependentUpon>
       <SubType>Designer</SubType>

@@ -32,6 +32,7 @@ namespace GlobalMacroRecorder
 
         private List<List<MacroEventSerializable>> m_listeventsSerializable;
         private List<MacroEventSerializable> m_eventsSerializable;
+        private List<int> m_listOfEventsChosenToExport;
         #endregion
 
 
@@ -54,9 +55,10 @@ namespace GlobalMacroRecorder
 
             m_listeventsSerializable = new List<List<MacroEventSerializable>>();
             m_eventsSerializable = new List<MacroEventSerializable>();
-            #endregion
+            m_listOfEventsChosenToExport = new List<int>();
+        #endregion
 
-            #region Initialize member objects attributes
+        #region Initialize member objects attributes
             //Initialize member objects attributes
             m_mouseHook = new MouseHook();
             m_keyboardHook = new KeyboardHook();
@@ -94,6 +96,12 @@ namespace GlobalMacroRecorder
             return m_listOfRadioButton;
         }
 
+        //Get the attribute m_listOfEventsChosenToExport
+        public List<int> getm_listOfEventsChosenToExport()
+        {
+            return m_listOfEventsChosenToExport;
+        }
+
         //Get the RadioButton by its id
         public System.Windows.Forms.RadioButton getRadioButtonByEventId(int idOfEvent)
         {
@@ -117,6 +125,15 @@ namespace GlobalMacroRecorder
                 }
             }
             #endregion
+        }
+        #endregion
+
+        #region SETTER
+        /****************** SETTER ******************/
+        //Set the attribute m_listOfEventsChosenToExport
+        public void setm_listOfEventsChosenToExport(int idOfEventsChosenToExport)
+        {
+            m_listOfEventsChosenToExport.Add(idOfEventsChosenToExport);
         }
         #endregion
 
@@ -654,6 +671,15 @@ namespace GlobalMacroRecorder
             }
             else
             {
+                ChooseEventToImported chooseEventToImported = new ChooseEventToImported(this);
+                chooseEventToImported.ShowDialog();
+
+                List<List<MacroEventSerializable>> listeventsSerializableChosenToExport = new List<List<MacroEventSerializable>>();
+                for(int i=0; i<m_listOfEventsChosenToExport.Count; i++)
+                {
+                    listeventsSerializableChosenToExport.Add(m_listeventsSerializable[m_listOfEventsChosenToExport[i]]);
+                }
+
                 Stream streamToSerializeEvents;
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
@@ -668,11 +694,13 @@ namespace GlobalMacroRecorder
                         Console.WriteLine(m_listeventsSerializable);
                         // Code to write the stream goes here.
                         XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEventSerializable>>));
-                        eventSerialisation.Serialize(streamToSerializeEvents, m_listeventsSerializable);
-                       
+                        eventSerialisation.Serialize(streamToSerializeEvents, listeventsSerializableChosenToExport);
+
                         streamToSerializeEvents.Close();
                     }
                 }
+
+                m_listOfEventsChosenToExport.Clear();//Clear the list m_listOfEventsChosenToExport
             }
         }
         #endregion
