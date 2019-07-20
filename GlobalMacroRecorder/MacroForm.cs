@@ -33,6 +33,7 @@ namespace GlobalMacroRecorder
         private List<List<MacroEventSerializable>> m_listeventsSerializable;
         private List<MacroEventSerializable> m_eventsSerializable;
         private List<int> m_listOfEventsChosenToExport;
+        private bool m_importEventsConfiration;
         #endregion
 
 
@@ -56,9 +57,10 @@ namespace GlobalMacroRecorder
             m_listeventsSerializable = new List<List<MacroEventSerializable>>();
             m_eventsSerializable = new List<MacroEventSerializable>();
             m_listOfEventsChosenToExport = new List<int>();
-        #endregion
+            m_importEventsConfiration = false;
+            #endregion
 
-        #region Initialize member objects attributes
+            #region Initialize member objects attributes
             //Initialize member objects attributes
             m_mouseHook = new MouseHook();
             m_keyboardHook = new KeyboardHook();
@@ -134,6 +136,12 @@ namespace GlobalMacroRecorder
         public void setm_listOfEventsChosenToExport(int idOfEventsChosenToExport)
         {
             m_listOfEventsChosenToExport.Add(idOfEventsChosenToExport);
+        }
+
+        //Set the attribute m_importEventsConfiration
+        public void setm_importEventsConfiration(bool importEventsConfiration)
+        {
+            m_importEventsConfiration = importEventsConfiration;
         }
         #endregion
 
@@ -663,44 +671,54 @@ namespace GlobalMacroRecorder
             if (m_listevents.Count() == 0)
             {
                 // Configure the message box to be displayed
-                string messageBoxText = "Cannot export events because there are no events that have been created yet. Create at least one event to be able to export events!";
-                string caption = "Action";
+                string messageBoxText = "Cannot export events because there are no event that have been created yet. Create at least one event to be able to export events!";
+                string caption = "Error";
                 MessageBoxButtons button = MessageBoxButtons.OK;
                 MessageBoxIcon icon = MessageBoxIcon.Error;
                 MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the metod playBackMacroButton_Click fail
             }
             else
             {
-                ChooseEventToImported chooseEventToImported = new ChooseEventToImported(this);
-                chooseEventToImported.ShowDialog();
+                #region Create a chooseEventToImported Form to choose which events the user want import
+                //Create a chooseEventToImported Form to choose which events the user want import.
+                ChooseEventToImported chooseEventToImported = new ChooseEventToImported(this);//Create a chooseEventToImported Form to choose which events the user want import.
+                chooseEventToImported.ShowDialog();//Show in modal mode the chooseEventToImported Form.
+                #endregion
 
-                List<List<MacroEventSerializable>> listeventsSerializableChosenToExport = new List<List<MacroEventSerializable>>();
-                for(int i=0; i<m_listOfEventsChosenToExport.Count; i++)
+                #region Import the chosen events.
+                //If m_importEventsConfiration attribute is equal to true, import events.
+                if (m_importEventsConfiration)
                 {
-                    listeventsSerializableChosenToExport.Add(m_listeventsSerializable[m_listOfEventsChosenToExport[i]]);
-                }
-
-                Stream streamToSerializeEvents;
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-                saveFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
-                saveFileDialog1.FilterIndex = 1;
-                saveFileDialog1.RestoreDirectory = true;
-
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    if ((streamToSerializeEvents = saveFileDialog1.OpenFile()) != null)
+                    List<List<MacroEventSerializable>> listeventsSerializableChosenToExport = new List<List<MacroEventSerializable>>();
+                    for (int i = 0; i < m_listOfEventsChosenToExport.Count; i++)
                     {
-                        Console.WriteLine(m_listeventsSerializable);
-                        // Code to write the stream goes here.
-                        XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEventSerializable>>));
-                        eventSerialisation.Serialize(streamToSerializeEvents, listeventsSerializableChosenToExport);
-
-                        streamToSerializeEvents.Close();
+                        listeventsSerializableChosenToExport.Add(m_listeventsSerializable[m_listOfEventsChosenToExport[i]]);
                     }
-                }
 
-                m_listOfEventsChosenToExport.Clear();//Clear the list m_listOfEventsChosenToExport
+                    Stream streamToSerializeEvents;
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+                    saveFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+                    saveFileDialog1.FilterIndex = 1;
+                    saveFileDialog1.RestoreDirectory = true;
+
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        if ((streamToSerializeEvents = saveFileDialog1.OpenFile()) != null)
+                        {
+                            Console.WriteLine(m_listeventsSerializable);
+                            // Code to write the stream goes here.
+                            XmlSerializer eventSerialisation = new XmlSerializer(typeof(List<List<MacroEventSerializable>>));
+                            eventSerialisation.Serialize(streamToSerializeEvents, listeventsSerializableChosenToExport);
+
+                            streamToSerializeEvents.Close();
+                        }
+                    }
+
+                    m_listOfEventsChosenToExport.Clear();//Clear the list m_listOfEventsChosenToExport
+                    m_importEventsConfiration = false;//Set the m_importEventsConfiration attribute to false
+                }
+                #endregion
             }
         }
         #endregion

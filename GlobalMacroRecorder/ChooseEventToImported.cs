@@ -199,6 +199,7 @@ namespace GlobalMacroRecorder
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
+            m_MacroForm.setm_importEventsConfiration(false);//Set the m_importEventsConfiration attribute of the MacroForm m_MacroForm to false.
             this.Close();//Close the ChooseEventToImport Form
         }
 
@@ -222,6 +223,7 @@ namespace GlobalMacroRecorder
                 idOfCheckBox++;
             }
             #endregion
+            m_MacroForm.setm_importEventsConfiration(true);//Set the m_importEventsConfiration attribute of the MacroForm m_MacroForm to true.
             this.Close();//Close the ChooseEventToImport Form
         }
     }
