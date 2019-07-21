@@ -39,6 +39,7 @@
             this.speechButton = new System.Windows.Forms.Button();
             this.ImportSeveralEventsButton = new System.Windows.Forms.Button();
             this.ExportSeveralEventsButton = new System.Windows.Forms.Button();
+            this.EventSettingButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,17 +133,28 @@
             // 
             this.ExportSeveralEventsButton.Location = new System.Drawing.Point(146, 119);
             this.ExportSeveralEventsButton.Name = "ExportSeveralEventsButton";
-            this.ExportSeveralEventsButton.Size = new System.Drawing.Size(121, 35);
+            this.ExportSeveralEventsButton.Size = new System.Drawing.Size(120, 36);
             this.ExportSeveralEventsButton.TabIndex = 6;
             this.ExportSeveralEventsButton.Text = "Export Several Events";
             this.ExportSeveralEventsButton.UseVisualStyleBackColor = true;
             this.ExportSeveralEventsButton.Click += new System.EventHandler(this.ExportSeveralEventsButton_Click);
+            // 
+            // EventSettingButton
+            // 
+            this.EventSettingButton.Location = new System.Drawing.Point(274, 118);
+            this.EventSettingButton.Name = "EventSettingButton";
+            this.EventSettingButton.Size = new System.Drawing.Size(92, 36);
+            this.EventSettingButton.TabIndex = 7;
+            this.EventSettingButton.Text = "Event Setting";
+            this.EventSettingButton.UseVisualStyleBackColor = true;
+            this.EventSettingButton.Click += new System.EventHandler(this.EventSettingButton_Click);
             // 
             // MacroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 346);
+            this.Controls.Add(this.EventSettingButton);
             this.Controls.Add(this.ExportSeveralEventsButton);
             this.Controls.Add(this.ImportSeveralEventsButton);
             this.Controls.Add(this.speechButton);
@@ -173,6 +185,7 @@
         private System.Windows.Forms.Button speechButton;
         private System.Windows.Forms.Button ImportSeveralEventsButton;
         private System.Windows.Forms.Button ExportSeveralEventsButton;
+        private System.Windows.Forms.Button EventSettingButton;
     }
 }
 

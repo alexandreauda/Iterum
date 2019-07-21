@@ -33,7 +33,7 @@ namespace GlobalMacroRecorder
         private List<List<MacroEventSerializable>> m_listeventsSerializable;
         private List<MacroEventSerializable> m_eventsSerializable;
         private List<int> m_listOfEventsChosenToExport;
-        private bool m_importEventsConfiration;
+        private bool m_exportEventsConfiration;
         #endregion
 
 
@@ -57,7 +57,7 @@ namespace GlobalMacroRecorder
             m_listeventsSerializable = new List<List<MacroEventSerializable>>();
             m_eventsSerializable = new List<MacroEventSerializable>();
             m_listOfEventsChosenToExport = new List<int>();
-            m_importEventsConfiration = false;
+            m_exportEventsConfiration = false;
             #endregion
 
             #region Initialize member objects attributes
@@ -138,10 +138,10 @@ namespace GlobalMacroRecorder
             m_listOfEventsChosenToExport.Add(idOfEventsChosenToExport);
         }
 
-        //Set the attribute m_importEventsConfiration
-        public void setm_importEventsConfiration(bool importEventsConfiration)
+        //Set the attribute m_exportEventsConfiration
+        public void setm_exportEventsConfiration(bool exportEventsConfiration)
         {
-            m_importEventsConfiration = importEventsConfiration;
+            m_exportEventsConfiration = exportEventsConfiration;
         }
         #endregion
 
@@ -670,12 +670,14 @@ namespace GlobalMacroRecorder
             //if there are no events that have been created yet, we cannot export events. So, we create a error message box.
             if (m_listevents.Count() == 0)
             {
+                #region If there are no events that have been created yet, we cannot export events. So, we create a error message box.
                 // Configure the message box to be displayed
                 string messageBoxText = "Cannot export events because there are no event that have been created yet. Create at least one event to be able to export events!";
                 string caption = "Error";
                 MessageBoxButtons button = MessageBoxButtons.OK;
                 MessageBoxIcon icon = MessageBoxIcon.Error;
                 MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the metod playBackMacroButton_Click fail
+                #endregion
             }
             else
             {
@@ -685,9 +687,9 @@ namespace GlobalMacroRecorder
                 chooseEventsToExport.ShowDialog();//Show in modal mode the chooseEventsToExport Form.
                 #endregion
 
-                #region Import the chosen events.
-                //If m_importEventsConfiration attribute is equal to true, import events.
-                if (m_importEventsConfiration)
+                #region Export the chosen events.
+                //If m_exportEventsConfiration attribute is equal to true, import events.
+                if (m_exportEventsConfiration)
                 {
                     List<List<MacroEventSerializable>> listeventsSerializableChosenToExport = new List<List<MacroEventSerializable>>();
                     for (int i = 0; i < m_listOfEventsChosenToExport.Count; i++)
@@ -716,13 +718,20 @@ namespace GlobalMacroRecorder
                     }
 
                     m_listOfEventsChosenToExport.Clear();//Clear the list m_listOfEventsChosenToExport
-                    m_importEventsConfiration = false;//Set the m_importEventsConfiration attribute to false
+                    m_exportEventsConfiration = false;//Set the m_exportEventsConfiration attribute to false
                 }
                 #endregion
             }
         }
         #endregion
 
+        #endregion
+
+        #region Methods to configure the setting of events
+        private void EventSettingButton_Click(object sender, EventArgs e)
+        {
+            
+        }
         #endregion
 
         #region Methods to check/uncheck a RadioButton by its event id
