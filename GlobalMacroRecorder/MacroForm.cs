@@ -26,6 +26,8 @@ namespace GlobalMacroRecorder
         private bool m_speechRecognitionActivate;
         private List<System.Windows.Forms.RadioButton> m_listOfRadioButton;
         private ASR m_ASR;
+        private List<List<MacroEvent>> m_listEventsWithSetting;
+        private List<MacroEvent> m_eventsWithSetting;
 
         private MouseHook m_mouseHook;
         private KeyboardHook m_keyboardHook;
@@ -53,6 +55,8 @@ namespace GlobalMacroRecorder
             m_numberID = 0;
             m_speechRecognitionActivate = false;
             m_listOfRadioButton = new List<System.Windows.Forms.RadioButton>();
+            m_listEventsWithSetting = new List<List<MacroEvent>>();
+            m_eventsWithSetting = new List<MacroEvent>();
 
             m_listeventsSerializable = new List<List<MacroEventSerializable>>();
             m_eventsSerializable = new List<MacroEventSerializable>();
@@ -138,6 +142,111 @@ namespace GlobalMacroRecorder
             m_listOfEventsChosenToExport.Add(idOfEventsChosenToExport);
         }
 
+        //Set the speed Of m_listEventsWithSetting list with the normal speed store in m_listevents
+        public void setm_listEventsWithSettingWithNormalSpeed(int currentEvent)
+        {
+            for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+            {
+                int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent();
+                m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+            }
+        }
+
+        //Set the speed Of m_listEventsWithSetting list with a custom multiplier speed. Indeed, we multiply the time speed by timeSpeedMultiplier if multiplierOperand = true and we divide the time speed by timeSpeedMultiplier if multiplierOperand = false.
+        public int setm_listEventsWithSettingWithCustomMultiplierSpeed(int currentEvent, bool multiplierOperand, int timeSpeedMultiplier)
+        {
+            //if the user try to divide by 0.
+            if (timeSpeedMultiplier == 0 && multiplierOperand == false)
+            {
+                #region We cannot divide the timespeed by 0.
+                // Configure the message box to be displayed
+                string messageBoxText = "We cannot divide by time speed by 0! We set for you the speed multiplier to 1 for the current event.";
+                string caption = "Error";
+                MessageBoxButtons button = MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Error;
+                MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the speed of an event connot be faster than instantaneous
+                #endregion
+                return 1;
+            }
+            if (timeSpeedMultiplier < 0)
+            {
+                #region If timeSpeedMultiplier<0, we set timeSpeedMultiplier=1 and we create a error message box to inform the user.
+                // Configure the message box to be displayed
+                string messageBoxText = "We cannot set the timeSpeedMultiplier<0. We set for you the speed multiplier to the absolute value of your entry for the current event. So the speed multiplier is set to "+ Math.Abs(timeSpeedMultiplier);
+                string caption = "Warning";
+                MessageBoxButtons button = MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Warning;
+                MessageBox.Show(messageBoxText, caption, button, icon);//Show message box warning to inform user that the speed of an event connot be faster than instantaneous
+                #endregion
+                if (multiplierOperand == true)
+                {
+                    for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    {
+                        int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() * Math.Abs(timeSpeedMultiplier);
+                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                    }
+                }
+                return Math.Abs(timeSpeedMultiplier);
+            }
+            else
+            {
+                //If multiplierOperand is equal to true, we set the operand by a multiply operand
+                if (multiplierOperand)
+                {
+                    for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    {
+                        int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() * timeSpeedMultiplier;
+                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                    }
+                }
+                //If multiplierOperand is equal to true, we set the operand by a divide operand
+                else
+                {
+                    for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    {
+                        int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() / timeSpeedMultiplier;
+                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                    }
+                }
+                return timeSpeedMultiplier;
+            }
+        }
+
+        //Set the speed Of m_listEventsWithSetting list with a custom uniform speed
+        public bool setm_listEventsWithSettingWithCustomUniformSpeed(int currentEvent, int timeSpeed)
+        {
+            if(timeSpeed < 0)
+            {
+                #region If timeSpeed<0, we set timeSpeed=0 and we create a error message box to inform the user.
+                // Configure the message box to be displayed
+                string messageBoxText = "The speed of an event cannot be faster than instantaneous! We set for you the speed of current event to 0.";
+                string caption = "Warning";
+                MessageBoxButtons button = MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Warning;
+                MessageBox.Show(messageBoxText, caption, button, icon);//Show message box warning to inform user that the speed of an event connot be faster than instantaneous
+                #endregion
+                for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                {
+                    m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(0);
+                    m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(0);
+                }
+                return false;//Return false if timeSpeed < 0
+            }
+            else
+            {
+                for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                {
+                    m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(timeSpeed);
+                    m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(timeSpeed);
+                }
+                return true;//Return true if timeSpeed >= 0
+            }
+        }
+
         //Set the attribute m_exportEventsConfiration
         public void setm_exportEventsConfiration(bool exportEventsConfiration)
         {
@@ -156,6 +265,7 @@ namespace GlobalMacroRecorder
         {
             int TimeSinceLastEvent = Environment.TickCount - m_lastTimeRecorded;
             m_events.Add(new MacroEvent(MacroEventType.MouseMove, e, TimeSinceLastEvent));
+            m_eventsWithSetting.Add(new MacroEvent(MacroEventType.MouseMove, e, TimeSinceLastEvent));
             m_lastTimeRecorded = Environment.TickCount;
             MouseEventArgsSerializable eSerializable = new MouseEventArgsSerializable(e.Button, e.Clicks, e.X, e.Y, e.Delta);
             m_eventsSerializable.Add(new MacroEventSerializable(MacroEventType.MouseMove, eSerializable, TimeSinceLastEvent));
@@ -166,6 +276,7 @@ namespace GlobalMacroRecorder
         {
             int TimeSinceLastEvent = Environment.TickCount - m_lastTimeRecorded;
             m_events.Add(new MacroEvent(MacroEventType.MouseDown, e, TimeSinceLastEvent));
+            m_eventsWithSetting.Add(new MacroEvent(MacroEventType.MouseDown, e, TimeSinceLastEvent));
             m_lastTimeRecorded = Environment.TickCount;
             MouseEventArgsSerializable eSerializable = new MouseEventArgsSerializable(e.Button, e.Clicks, e.X, e.Y, e.Delta);
             m_eventsSerializable.Add(new MacroEventSerializable(MacroEventType.MouseDown, eSerializable, TimeSinceLastEvent));
@@ -176,6 +287,7 @@ namespace GlobalMacroRecorder
         {
             int TimeSinceLastEvent = Environment.TickCount - m_lastTimeRecorded;
             m_events.Add(new MacroEvent(MacroEventType.MouseUp, e, TimeSinceLastEvent));
+            m_eventsWithSetting.Add(new MacroEvent(MacroEventType.MouseUp, e, TimeSinceLastEvent));
             m_lastTimeRecorded = Environment.TickCount;
             MouseEventArgsSerializable eSerializable = new MouseEventArgsSerializable(e.Button, e.Clicks, e.X, e.Y, e.Delta);
             m_eventsSerializable.Add(new MacroEventSerializable(MacroEventType.MouseUp, eSerializable, TimeSinceLastEvent));
@@ -187,6 +299,7 @@ namespace GlobalMacroRecorder
         {
             int TimeSinceLastEvent = Environment.TickCount - m_lastTimeRecorded;
             m_events.Add(new MacroEvent(MacroEventType.KeyDown, e, TimeSinceLastEvent));
+            m_eventsWithSetting.Add(new MacroEvent(MacroEventType.KeyDown, e, TimeSinceLastEvent));
             m_lastTimeRecorded = Environment.TickCount;
             KeysEventArgsSerializable eSerializable = new KeysEventArgsSerializable(e.KeyData);
             m_eventsSerializable.Add(new MacroEventSerializable(MacroEventType.KeyDown, eSerializable, TimeSinceLastEvent));
@@ -198,6 +311,7 @@ namespace GlobalMacroRecorder
         {
             int TimeSinceLastEvent = Environment.TickCount - m_lastTimeRecorded;
             m_events.Add(new MacroEvent(MacroEventType.KeyUp, e, TimeSinceLastEvent));
+            m_eventsWithSetting.Add(new MacroEvent(MacroEventType.KeyUp, e, TimeSinceLastEvent));
             m_lastTimeRecorded = Environment.TickCount;
             KeysEventArgsSerializable eSerializable = new KeysEventArgsSerializable(e.KeyData);
             m_eventsSerializable.Add(new MacroEventSerializable(MacroEventType.KeyUp, eSerializable, TimeSinceLastEvent));
@@ -380,6 +494,7 @@ namespace GlobalMacroRecorder
 
             #region Clear the list dedicated to store the action of user (MacroEvent) and start the TickCount
             m_events.Clear();
+            m_eventsWithSetting.Clear();
             m_lastTimeRecorded = Environment.TickCount;
             #endregion
 
@@ -417,10 +532,16 @@ namespace GlobalMacroRecorder
             m_listevents.Add(testEvents);//Add the list testEvents which is a copy of m_events and which contains the last record. We do a copy because otherwise, it is added by reference.
             #endregion
 
+            #region Add the last record to the list of events with setting m_listEventsWithSetting
+            List<MacroEvent> testEventsWithSetting = new List<MacroEvent>(m_eventsWithSetting);//Make a copy of list m_eventsWithSetting called testEvents. So now, m_eventsWithSetting=testEventsWithSetting.
+            m_listEventsWithSetting.Add(testEventsWithSetting);//Add the list testEventsWithSetting which is a copy of m_eventsWithSetting and which contains the last record. We do a copy because otherwise, it is added by reference.
+
+            #endregion
+
             #region Add the last record to the list of events serializable
             //Add the last record to the m_listeventsSerializable which contains the all lists of events.
-            List<MacroEventSerializable> testEventsSerializable = new List<MacroEventSerializable>(m_eventsSerializable);//Make a copy of list m_events called testEvents. So now, m_events=testEvents.
-            m_listeventsSerializable.Add(testEventsSerializable);//Add the list testEvents which is a copy of m_events and which contains the last record. We do a copy because otherwise, it is added by reference.
+            List<MacroEventSerializable> testEventsSerializable = new List<MacroEventSerializable>(m_eventsSerializable);//Make a copy of list m_events called testEventsSerializable. So now, m_events=testEventsSerializable.
+            m_listeventsSerializable.Add(testEventsSerializable);//Add the list testEventsSerializable which is a copy of m_events and which contains the last record. We do a copy because otherwise, it is added by reference.
             m_eventsSerializable.Clear();
             #endregion
         }
@@ -457,14 +578,14 @@ namespace GlobalMacroRecorder
 
             #region Playback the event that the user has chosen
             //Playback the event that the user has chosen
-            foreach (MacroEvent macroEvent in m_listevents[numberIDSelected])
+            foreach (MacroEvent macroEvent in m_listEventsWithSetting[numberIDSelected])
             {
                 Thread.Sleep(macroEvent.TimeSinceLastEvent);//Stop the timer until that the macroEvent stop
 
-                //Switch the type of MacroEvent read in the m_listevents[numberIDSelected]
+                //Switch the type of MacroEvent read in the m_listEventsWithSetting[numberIDSelected]
                 switch (macroEvent.MacroEventType)
                 {
-                    //If the MacroEvent read in the m_listevents[numberIDSelected] is of type MouseMove, then simulate the same movement of mouse.
+                    //If the MacroEvent read in the m_listEventsWithSetting[numberIDSelected] is of type MouseMove, then simulate the same movement of mouse.
                     case MacroEventType.MouseMove:
                         {
                             MouseEventArgs mouseArgs = (MouseEventArgs)macroEvent.EventArgs;
@@ -473,7 +594,7 @@ namespace GlobalMacroRecorder
                         }
                         break;
 
-                    //If the MacroEvent read in the m_listevents[numberIDSelected] is of type MouseDown, then simulate the same clic of mouse.
+                    //If the MacroEvent read in the m_listEventsWithSetting[numberIDSelected] is of type MouseDown, then simulate the same clic of mouse.
                     case MacroEventType.MouseDown:
                         {
                             MouseEventArgs mouseArgs = (MouseEventArgs)macroEvent.EventArgs;
@@ -481,7 +602,7 @@ namespace GlobalMacroRecorder
                         }
                         break;
 
-                    //If the MacroEvent read in the m_listevents[numberIDSelected] is of type MouseUp, then simulate the same action of mouse.
+                    //If the MacroEvent read in the m_listEventsWithSetting[numberIDSelected] is of type MouseUp, then simulate the same action of mouse.
                     case MacroEventType.MouseUp:
                         {
                             MouseEventArgs mouseArgs = (MouseEventArgs)macroEvent.EventArgs;
@@ -489,7 +610,7 @@ namespace GlobalMacroRecorder
                         }
                         break;
 
-                    //If the MacroEvent read in the m_listevents[numberIDSelected] is of type KeyDown, then simulate the same action of keyboard.
+                    //If the MacroEvent read in the m_listEventsWithSetting[numberIDSelected] is of type KeyDown, then simulate the same action of keyboard.
                     case MacroEventType.KeyDown:
                         {
                             KeyEventArgs keyArgs = (KeyEventArgs)macroEvent.EventArgs;
@@ -497,7 +618,7 @@ namespace GlobalMacroRecorder
                         }
                         break;
 
-                    //If the MacroEvent read in the m_listevents[numberIDSelected] is of type KeyUp, then simulate the same action of keyboad.
+                    //If the MacroEvent read in the m_listEventsWithSetting[numberIDSelected] is of type KeyUp, then simulate the same action of keyboad.
                     case MacroEventType.KeyUp:
                         {
                             KeyEventArgs keyArgs = (KeyEventArgs)macroEvent.EventArgs;
@@ -592,7 +713,9 @@ namespace GlobalMacroRecorder
                             listMacroEventRecreated.Add(currentEvent);
                         }
                         m_listevents.Add(listMacroEventRecreated);
+                        m_listEventsWithSetting.Add(listMacroEventRecreated);
                     }
+                    m_listeventsSerializable.AddRange(listEventsImported);
 
                     #region For each Event imported, create a new RadioButton dynamically
                     if (m_numberID == 0)
@@ -730,7 +853,49 @@ namespace GlobalMacroRecorder
         #region Methods to configure the setting of events
         private void EventSettingButton_Click(object sender, EventArgs e)
         {
-            
+            //If there are no events that have been created yet, we cannot configure the setting of events. So, we create a error message box.
+            if (m_listevents.Count() == 0)
+            {
+                #region If there are no events that have been created yet, we cannot configure the setting of events. So, we create a error message box.
+                // Configure the message box to be displayed
+                string messageBoxText = "Cannot configure the setting of events because there are no event that have been created yet. Create at least one event to be able to configure the settings of events!";
+                string caption = "Error";
+                MessageBoxButtons button = MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Error;
+                MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the metod EventSettingButton_Click fail
+                #endregion
+            }
+            //If there are at least one event created
+            else
+            {
+                #region Parse the radio buttons to know which one is checked
+                int numberIDSelected = 1;
+                //For each component in ScrollPanel of FormModePersonalize Form
+                foreach (object o in ScrollPanel.Controls)
+                {
+                    //If the component is a RadioButton (i.e: If the type of component is a RadioButton).
+                    if (o is System.Windows.Forms.RadioButton)
+                    {
+                        System.Windows.Forms.RadioButton currentRadioButton = (System.Windows.Forms.RadioButton)o;//Stock the component (which is a RadioButton) on a variable called currentRadioButton.
+                                                                                                                  //If the current RadioButton is checked
+                        if (currentRadioButton.Checked == true)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            numberIDSelected++;
+                        }
+                    }
+                }
+                #endregion
+
+                #region Create a EventSettingForm Form to configure the setting of events
+                //Create a EventSettingForm Form to configure the setting of events.
+                EventSettingForm eventSettingForm = new EventSettingForm(this, numberIDSelected-1);//Create a EventSettingForm Form to configure the setting of events.
+                eventSettingForm.ShowDialog();//Show in modal mode the eventSettingForm Form.
+                #endregion
+            }
         }
         #endregion
 

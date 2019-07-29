@@ -139,5 +139,23 @@ namespace GlobalMacroRecorder
 
         }
 
+        #region GETTER
+        /****************** GETTER ******************/
+        //Get the attribute TimeSinceLastEvent
+        public int getTimeSinceLastEvent()
+        {
+            return TimeSinceLastEvent;
+        }
+        #endregion
+
+        #region SETTER
+        /****************** SETTER ******************/
+        //Set the attribute TimeSinceLastEvent
+        public void setTimeSinceLastEvent(int timeSinceLastEvent)
+        {
+            TimeSinceLastEvent = timeSinceLastEvent;//Set the attribute TimeSinceLastEvent
+        }
+        #endregion
+
     }
 }

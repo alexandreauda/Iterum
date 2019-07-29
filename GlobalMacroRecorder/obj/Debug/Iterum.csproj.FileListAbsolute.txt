@@ -39,3 +39,4 @@ C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\De
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.ChooseEventsToExport.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.EventSettingForm.resources

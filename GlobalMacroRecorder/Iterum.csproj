@@ -70,6 +70,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASR.cs" />
+    <Compile Include="EventSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventSettingForm.Designer.cs">
+      <DependentUpon>EventSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MacroEventSerializable.cs" />
     <Compile Include="KeysEventArgsSerializable.cs" />
     <Compile Include="ChooseEventsToExport.cs">
@@ -88,6 +94,10 @@
     <Compile Include="Macro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EventSettingForm.resx">
+      <DependentUpon>EventSettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChooseEventsToExport.resx">
       <DependentUpon>ChooseEventsToExport.cs</DependentUpon>
       <SubType>Designer</SubType>

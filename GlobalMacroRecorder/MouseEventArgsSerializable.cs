@@ -78,13 +78,6 @@ namespace GlobalMacroRecorder
         #region METHODS
 
         /****************** METHODS ******************/
-        #region Methods 1
-        // Methods 1
-        private void method1(object sender, SpeechHypothesizedEventArgs e)
-        {
-            //Write here
-        }
-        #endregion
 
         #endregion
     }
