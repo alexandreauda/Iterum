@@ -113,23 +113,55 @@ namespace GlobalMacroRecorder
                     break;
 
                 case 2:
-                    isValideToClose = true;
+                    bool divideSpeed = false;
+                    if (trackBarChooseOperand.Value == 1)
+                    {
+                        divideSpeed = false;
+                    }
+                    else
+                    {
+                        divideSpeed = true;
+                    }
+                    string inputCustomMultiplierTimeSpeed = numericUpDownMultiplierTimeSpeed.Text;
+                    int resultCustomMultiplierTimeSpeed = 2;
+                    try
+                    {
+                        resultCustomMultiplierTimeSpeed = Int32.Parse(inputCustomMultiplierTimeSpeed);//Try to transform the entry of inputCustomMultiplierTimeSpeed textbox in integer
+                        int resultOfSetCustomMultiplierSpeed = m_MacroForm.setm_listEventsWithSettingWithCustomMultiplierSpeed(m_numberIdOfCurrentEvent, divideSpeed, resultCustomMultiplierTimeSpeed);//Set the time speed multiplier with the entry of numericUpDownMultiplierTimeSpeed textbox
+                        if(resultOfSetCustomMultiplierSpeed == 1)
+                        {
+                            isValideToClose = true;
+                        }
+                    }
+                    //If we cannot transform the entry of numericUpDownMultiplierTimeSpeed textbox in integer, we create a error message box to inform the user and we don't close windows.
+                    catch (FormatException)
+                    {
+                        numericUpDownMultiplierTimeSpeed.Text = "2";
+                        #region If we cannot transform the entry of numericUpDownMultiplierTimeSpeed textbox in integer, we create a error message box to inform the user and we don't close windows.
+                        // Configure the message box to be displayed
+                        string messageBoxText = "The time speed of event must be an integer. Please, enter an integer for the time speed multiplier of event. The more the time speed is bigger, the more the playback will be play slowly.";
+                        string caption = "Error";
+                        MessageBoxButtons button = MessageBoxButtons.OK;
+                        MessageBoxIcon icon = MessageBoxIcon.Error;
+                        MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user.
+                        #endregion
+                    }
                     break;
 
                 case 3:
-                    string inputCustomUniformSpeed = textBoxUniformSpeed.Text;
+                    string inputCustomUniformSpeed = NumericUpDownUniformSpeed.Text;
                     int resultCustomUniformSpeed = 0;
                     try
                     {
-                        resultCustomUniformSpeed = Int32.Parse(inputCustomUniformSpeed);//Try to transform the entry of textBoxUniformSpeed textbox in integer
-                        m_MacroForm.setm_listEventsWithSettingWithCustomUniformSpeed(m_numberIdOfCurrentEvent, resultCustomUniformSpeed);//Set the speed with the entry of textBoxUniformSpeed textbox
+                        resultCustomUniformSpeed = Int32.Parse(inputCustomUniformSpeed);//Try to transform the entry of NumericUpDownUniformSpeed textbox in integer
+                        m_MacroForm.setm_listEventsWithSettingWithCustomUniformSpeed(m_numberIdOfCurrentEvent, resultCustomUniformSpeed);//Set the speed with the entry of NumericUpDownUniformSpeed textbox
                         isValideToClose = true;//Set the variable to close the EventSettingForm Form.
                     }
-                    //If we cannot transform the entry of textBoxUniformSpeed textbox in integer, we create a error message box to inform the user and we don't close windows.
+                    //If we cannot transform the entry of NumericUpDownUniformSpeed textbox in integer, we create a error message box to inform the user and we don't close windows.
                     catch (FormatException)
                     {
-                        textBoxUniformSpeed.Text = "0";
-                        #region If we cannot transform the entry of textBoxUniformSpeed textbox in integer, we create a error message box to inform the user and we don't close windows.
+                        NumericUpDownUniformSpeed.Text = "0";
+                        #region If we cannot transform the entry of NumericUpDownUniformSpeed textbox in integer, we create a error message box to inform the user and we don't close windows.
                         // Configure the message box to be displayed
                         string messageBoxText = "The time speed of event must be an integer. Please, enter an integer for the time speed of event. An event with a time speed equal to 0 will be playback instantaneous and the more the time speed is bigger, the more the playback will be play slowly.";
                         string caption = "Error";
@@ -167,6 +199,7 @@ namespace GlobalMacroRecorder
             {
                 m_numberID_RadioButtonOptionSpeed = 2;
                 enableOnlyCurrentGroup();//Enable the current group chosen and disable the other groups
+                numericUpDownMultiplierTimeSpeed.Focus();//Set the focus on numericUpDownMultiplierTimeSpeed button.
             }
         }
 
@@ -176,7 +209,7 @@ namespace GlobalMacroRecorder
             {
                 m_numberID_RadioButtonOptionSpeed = 3;
                 enableOnlyCurrentGroup();//Enable the current group chosen and disable the other groups
-                textBoxUniformSpeed.Focus();//Set the focus on textBoxUniformSpeed.
+                NumericUpDownUniformSpeed.Focus();//Set the focus on NumericUpDownUniformSpeed.
             }
         }
 
@@ -189,9 +222,18 @@ namespace GlobalMacroRecorder
             }
         }
 
-        private void textBoxUniformSpeed_enterInput(object sender, KeyEventArgs e)
+        private void numericUpDownMultiplierTimeSpeed_enterInput(object sender, KeyEventArgs e)
         {
-            //If the user press the enter touch of keyboard when the textBoxUniformSpeed have the focus, press the Ok button of EventSettingForm Form.
+            //If the user press the enter touch of keyboard when the numericUpDownMultiplierTimeSpeed have the focus, press the Ok button of EventSettingForm Form.
+            if (e.KeyValue == 13)
+            {
+                okButton.PerformClick();//Press the Ok button of EventSettingForm Form.
+            }
+        }
+
+        private void NumericUpDownUniformSpeed_enterInput(object sender, KeyEventArgs e)
+        {
+            //If the user press the enter touch of keyboard when the NumericUpDownUniformSpeed have the focus, press the Ok button of EventSettingForm Form.
             if (e.KeyValue == 13)
             {
                 okButton.PerformClick();//Press the Ok button of EventSettingForm Form.

@@ -89,6 +89,8 @@ namespace GlobalMacroRecorder
             #region Disable unused button
             recordStopButton.Enabled = false;//Disable the button to stop the record
             playBackMacroButton.Enabled = false;//Disable the button to playBack the record
+            ExportSeveralEventsButton.Enabled = false;//Disable the button to export records
+            EventSettingButton.Enabled = false;//Disable the button to setting speed of a record
             #endregion
         }
         #endregion
@@ -167,7 +169,7 @@ namespace GlobalMacroRecorder
                 MessageBoxIcon icon = MessageBoxIcon.Error;
                 MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the speed of an event connot be faster than instantaneous
                 #endregion
-                return 1;
+                return -1;
             }
             if (timeSpeedMultiplier < 0)
             {
@@ -188,7 +190,7 @@ namespace GlobalMacroRecorder
                         m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
                     }
                 }
-                return Math.Abs(timeSpeedMultiplier);
+                return 0;
             }
             else
             {
@@ -212,7 +214,7 @@ namespace GlobalMacroRecorder
                         m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
                     }
                 }
-                return timeSpeedMultiplier;
+                return 1;
             }
         }
 
@@ -328,6 +330,10 @@ namespace GlobalMacroRecorder
             #region Enable recordStopButton Button
             recordStopButton.Enabled = true;//Enable recordStopButton Button
             #endregion
+
+            #region Enable ExportSeveralEventsButton Button
+            ExportSeveralEventsButton.Enabled = true;//Enable the button to export records
+            #endregion
         }
 
         //Disable unused button when we Start Record
@@ -339,6 +345,10 @@ namespace GlobalMacroRecorder
 
             #region Disable playBackMacroButton Button
             playBackMacroButton.Enabled = false;//Disable playBackMacroButton Button
+            #endregion
+
+            #region Disable EventSettingButton Button
+            EventSettingButton.Enabled = false;//Disable the button to setting speed of a record
             #endregion
 
             #region For each RadioButton component in ScrollPanel of FormModePersonalize Form, disable RadioButton
@@ -359,6 +369,14 @@ namespace GlobalMacroRecorder
 
             #region Enable playBackMacroButton Button
             playBackMacroButton.Enabled = true;//Enable playBackMacroButton Button
+            #endregion
+
+            #region Enable EventSettingButton Button
+            EventSettingButton.Enabled = true;//Enable the button to setting speed record
+            #endregion
+
+            #region Enable ExportSeveralEventsButton Button
+            ExportSeveralEventsButton.Enabled = true;//Enable the button to export records
             #endregion
 
             #region For each RadioButton component in ScrollPanel of FormModePersonalize Form, enable RadioButton
@@ -393,6 +411,14 @@ namespace GlobalMacroRecorder
             playBackMacroButton.Enabled = true;//Enable playBackMacroButton Button
             #endregion
 
+            #region Enable ExportSeveralEventsButton Button
+            ExportSeveralEventsButton.Enabled = true;//Enable the button to export records
+            #endregion
+
+            #region Enable EventSettingButton Button
+            EventSettingButton.Enabled = true;//Enable the button to setting speed record
+            #endregion
+
             #region For each RadioButton component in ScrollPanel of FormModePersonalize Form, enable RadioButton
             //For each component in ScrollPanel of FormModePersonalize Form
             foreach (System.Windows.Forms.RadioButton o in ScrollPanel.Controls)
@@ -415,6 +441,10 @@ namespace GlobalMacroRecorder
 
             #region Disable playBackMacroButton Button
             playBackMacroButton.Enabled = false;//Disable playBackMacroButton Button
+            #endregion
+
+            #region Disable EventSettingButton Button
+            EventSettingButton.Enabled = false;//Disable the button to setting speed record
             #endregion
 
             #region For each RadioButton component in ScrollPanel of FormModePersonalize Form, disable RadioButton
@@ -779,6 +809,14 @@ namespace GlobalMacroRecorder
 
                         #endregion
                     }
+                    #endregion
+
+                    #region Enable ExportSeveralEventsButton Button
+                    ExportSeveralEventsButton.Enabled = true;//Enable the button to export records
+                    #endregion
+
+                    #region Enable EventSettingButton Button
+                    EventSettingButton.Enabled = true;//Enable the button to setting speed record
                     #endregion
 
                     streamToDeserializeEvents.Close();
