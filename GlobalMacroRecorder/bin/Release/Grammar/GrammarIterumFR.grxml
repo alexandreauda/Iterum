@@ -51,6 +51,33 @@ root="mouskie" xmlns="http://www.w3.org/2001/06/grammar">
       </item>
       <item>
         <one-of>
+          <item>import</item>
+          <item>importe</item>
+          <item>importation</item>
+          <item>charge</item>
+          <item>load</item>
+        </one-of>
+        <tag>$._value="IMPORT";</tag>
+      </item>
+      <item>
+        <one-of>
+          <item>export</item>
+          <item>exporte</item>
+          <item>exportation</item>
+        </one-of>
+        <tag>$._value="EXPORT";</tag>
+      </item>
+      <item>
+        <one-of>
+          <item>setting</item>
+          <item>parametre</item>
+          <item>speed</item>
+          <item>time</item>
+        </one-of>
+        <tag>$._value="SETTING";</tag>
+      </item>
+      <item>
+        <one-of>
           <item>playback</item>
           <item>joue</item>
           <item>rejoue</item>
