@@ -128,6 +128,21 @@ namespace GlobalMacroRecorder
                 {
                     m_mainWindowIterum.speechButton_Click(null, EventArgs.Empty);//Call the method called by the speech button
                 }
+                //if the second key words has a associate value equal to "IMPORT" (in the grammar loaded)
+                else if (dataType.Equals("IMPORT"))
+                {
+                    m_mainWindowIterum.ImportSeveralEventsButton_Click(null, EventArgs.Empty);//Call the method called by the speech button
+                }
+                //if the second key words has a associate value equal to "EXPORT" (in the grammar loaded)
+                else if (dataType.Equals("EXPORT"))
+                {
+                    m_mainWindowIterum.ExportSeveralEventsButton_Click(null, EventArgs.Empty);//Call the method called by the speech button
+                }
+                //if the second key words has a associate value equal to "SETTING" (in the grammar loaded)
+                else if (dataType.Equals("SETTING"))
+                {
+                    m_mainWindowIterum.EventSettingButton_Click(null, EventArgs.Empty);//Call the method called by the speech button
+                }
                 //if the second key words has a associate value equal to "PLAYBACK" (in the grammar loaded)
                 else if (dataType.Equals("PLAYBACK"))
                 {

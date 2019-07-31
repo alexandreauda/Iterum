@@ -707,7 +707,7 @@ namespace GlobalMacroRecorder
         #region Methods to Import/Export Several Events
 
         #region Methods to Import Several Events
-        private void ImportSeveralEventsButton_Click(object sender, EventArgs e)
+        public void ImportSeveralEventsButton_Click(object sender, EventArgs e)
         {
             Stream streamToDeserializeEvents;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -826,7 +826,7 @@ namespace GlobalMacroRecorder
         #endregion
 
         #region Methods to Export Several Events
-        private void ExportSeveralEventsButton_Click(object sender, EventArgs e)
+        public void ExportSeveralEventsButton_Click(object sender, EventArgs e)
         {
             //if there are no events that have been created yet, we cannot export events. So, we create a error message box.
             if (m_listevents.Count() == 0)
@@ -889,7 +889,7 @@ namespace GlobalMacroRecorder
         #endregion
 
         #region Methods to configure the setting of events
-        private void EventSettingButton_Click(object sender, EventArgs e)
+        public void EventSettingButton_Click(object sender, EventArgs e)
         {
             //If there are no events that have been created yet, we cannot configure the setting of events. So, we create a error message box.
             if (m_listevents.Count() == 0)
