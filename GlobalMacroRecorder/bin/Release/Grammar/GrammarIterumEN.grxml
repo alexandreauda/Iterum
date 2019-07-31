@@ -54,6 +54,7 @@ root="mouskie" xmlns="http://www.w3.org/2001/06/grammar">
       <item>
         <one-of>
           <item>export</item>
+          <item>save</item>
         </one-of>
         <tag>$._value="EXPORT";</tag>
       </item>
