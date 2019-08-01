@@ -65,6 +65,7 @@ root="mouskie" xmlns="http://www.w3.org/2001/06/grammar">
           <item>exporte</item>
           <item>exportation</item>
           <item>save</item>
+          <item>sauve</item>
           <item>sauvegarde</item>
           <item>sauvegarder</item>
         </one-of>
