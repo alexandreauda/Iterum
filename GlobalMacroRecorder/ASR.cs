@@ -54,7 +54,21 @@ namespace GlobalMacroRecorder
             SrgsDocument xmlGrammar = new SrgsDocument(nameOfGrammarLoaded);//Creation of file in the norme SRGS from the grammar file in format grxml
             Grammar grammar = new Grammar(xmlGrammar);//Creation of grammar from the the grammar file in format grxml
             m_ASREngine = new SpeechRecognitionEngine(new CultureInfo(stringCurrentCulture));//Creation of object SpeechRecognitionEngine in the language of the current system
-            m_ASREngine.SetInputToDefaultAudioDevice();//Get the sound by microphone default
+            try
+            {
+                m_ASREngine.SetInputToDefaultAudioDevice();//Get the sound by microphone default
+            }
+            catch (Exception e)
+            {
+                #region If we cannot get the sound by microphone default. So, we create a error message box.
+                // Configure the message box to be displayed
+                string messageBoxText = "Cannot get the sound by microphone default. Turn on your microphone to use the speech recognition.";
+                string caption = "Error";
+                MessageBoxButtons button = MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Error;
+                MessageBox.Show(messageBoxText, caption, button, icon);//Show message box error to inform user that the metod EventSettingButton_Click fail
+                #endregion
+            }
             m_ASREngine.LoadGrammar(grammar);//Load grammar
             m_ASREngine.SpeechRecognized += ASREngine_SpeechRecognized;//Handle the SpeechRecognized method by the ASR engine
             m_ASREngine.SpeechRecognitionRejected += ASREngine_SpeechRecognitionRejected;//Handle the SpeechRecognitionRejected method by the ASR engine
