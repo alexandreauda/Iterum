@@ -144,7 +144,10 @@ namespace GlobalMacroRecorder
             m_listOfEventsChosenToExport.Add(idOfEventsChosenToExport);
         }
 
-        //Set the speed Of m_listEventsWithSetting list with the normal speed store in m_listevents
+
+        #region Setter speed of events
+
+        //Set the speed of m_listEventsWithSetting list with the normal speed store in m_listevents
         public void setm_listEventsWithSettingWithNormalSpeed(int currentEvent)
         {
             for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
@@ -155,7 +158,7 @@ namespace GlobalMacroRecorder
             }
         }
 
-        //Set the speed Of m_listEventsWithSetting list with a custom multiplier speed. Indeed, we multiply the time speed by timeSpeedMultiplier if multiplierOperand = true and we divide the time speed by timeSpeedMultiplier if multiplierOperand = false.
+        //Set the speed of m_listEventsWithSetting list with a custom multiplier speed. Indeed, we multiply the time speed by timeSpeedMultiplier if multiplierOperand = true and we divide the time speed by timeSpeedMultiplier if multiplierOperand = false.
         public int setm_listEventsWithSettingWithCustomMultiplierSpeed(int currentEvent, bool multiplierOperand, int timeSpeedMultiplier)
         {
             //if the user try to divide by 0.
@@ -218,7 +221,7 @@ namespace GlobalMacroRecorder
             }
         }
 
-        //Set the speed Of m_listEventsWithSetting list with a custom uniform speed
+        //Set the speed of m_listEventsWithSetting list with a custom uniform speed
         public bool setm_listEventsWithSettingWithCustomUniformSpeed(int currentEvent, int timeSpeed)
         {
             if(timeSpeed < 0)
@@ -248,6 +251,8 @@ namespace GlobalMacroRecorder
                 return true;//Return true if timeSpeed >= 0
             }
         }
+
+        #endregion
 
         //Set the attribute m_exportEventsConfiration
         public void setm_exportEventsConfiration(bool exportEventsConfiration)
