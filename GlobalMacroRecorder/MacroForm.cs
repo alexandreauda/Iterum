@@ -35,7 +35,9 @@ namespace GlobalMacroRecorder
         private List<List<MacroEventSerializable>> m_listeventsSerializable;
         private List<MacroEventSerializable> m_eventsSerializable;
         private List<int> m_listOfEventsChosenToExport;
+        private List<int> m_listOfEventsChosenToSetting;
         private bool m_exportEventsConfiration;
+        private bool m_settingEventsConfiration;
         #endregion
 
 
@@ -61,7 +63,9 @@ namespace GlobalMacroRecorder
             m_listeventsSerializable = new List<List<MacroEventSerializable>>();
             m_eventsSerializable = new List<MacroEventSerializable>();
             m_listOfEventsChosenToExport = new List<int>();
+            m_listOfEventsChosenToSetting = new List<int>();
             m_exportEventsConfiration = false;
+            m_settingEventsConfiration = false;
             #endregion
 
             #region Initialize member objects attributes
@@ -110,6 +114,12 @@ namespace GlobalMacroRecorder
             return m_listOfEventsChosenToExport;
         }
 
+        //Get the attribute m_listOfEventsChosenToSetting
+        public List<int> getm_listOfEventsChosenToSetting()
+        {
+            return m_listOfEventsChosenToSetting;
+        }
+
         //Get the RadioButton by its id
         public System.Windows.Forms.RadioButton getRadioButtonByEventId(int idOfEvent)
         {
@@ -144,22 +154,31 @@ namespace GlobalMacroRecorder
             m_listOfEventsChosenToExport.Add(idOfEventsChosenToExport);
         }
 
+        //Set the attribute m_listOfEventsChosenToSetting
+        public void setm_listOfEventsChosenToSetting(int idOfEventsChosenToSetting)
+        {
+            m_listOfEventsChosenToSetting.Add(idOfEventsChosenToSetting);
+        }
+
 
         #region Setter speed of events
 
         //Set the speed of m_listEventsWithSetting list with the normal speed store in m_listevents
-        public void setm_listEventsWithSettingWithNormalSpeed(int currentEvent)
+        public void setm_listEventsWithSettingWithNormalSpeed()
         {
-            for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+            foreach(int currentEvent in m_listOfEventsChosenToSetting)
             {
-                int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent();
-                m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
-                m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                for (int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                {
+                    int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent();
+                    m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                    m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                }
             }
         }
 
         //Set the speed of m_listEventsWithSetting list with a custom multiplier speed. Indeed, we multiply the time speed by timeSpeedMultiplier if multiplierOperand = true and we divide the time speed by timeSpeedMultiplier if multiplierOperand = false.
-        public int setm_listEventsWithSettingWithCustomMultiplierSpeed(int currentEvent, bool multiplierOperand, int timeSpeedMultiplier)
+        public int setm_listEventsWithSettingWithCustomMultiplierSpeed(bool multiplierOperand, int timeSpeedMultiplier)
         {
             //if the user try to divide by 0.
             if (timeSpeedMultiplier == 0 && multiplierOperand == false)
@@ -186,11 +205,14 @@ namespace GlobalMacroRecorder
                 #endregion
                 if (multiplierOperand == true)
                 {
-                    for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    foreach (int currentEvent in m_listOfEventsChosenToSetting)
                     {
-                        int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() * Math.Abs(timeSpeedMultiplier);
-                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
-                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        for (int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                        {
+                            int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() * Math.Abs(timeSpeedMultiplier);
+                            m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                            m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        }
                     }
                 }
                 return 0;
@@ -200,21 +222,27 @@ namespace GlobalMacroRecorder
                 //If multiplierOperand is equal to true, we set the operand by a multiply operand
                 if (multiplierOperand)
                 {
-                    for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    foreach (int currentEvent in m_listOfEventsChosenToSetting)
                     {
-                        int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() * timeSpeedMultiplier;
-                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
-                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        for (int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                        {
+                            int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() * timeSpeedMultiplier;
+                            m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                            m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        }
                     }
                 }
                 //If multiplierOperand is equal to true, we set the operand by a divide operand
                 else
                 {
-                    for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    foreach (int currentEvent in m_listOfEventsChosenToSetting)
                     {
-                        int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() / timeSpeedMultiplier;
-                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
-                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        for (int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                        {
+                            int currentSpeedTime = m_listevents[currentEvent][i].getTimeSinceLastEvent() / timeSpeedMultiplier;
+                            m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                            m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(currentSpeedTime);
+                        }
                     }
                 }
                 return 1;
@@ -222,7 +250,7 @@ namespace GlobalMacroRecorder
         }
 
         //Set the speed of m_listEventsWithSetting list with a custom uniform speed
-        public bool setm_listEventsWithSettingWithCustomUniformSpeed(int currentEvent, int timeSpeed)
+        public bool setm_listEventsWithSettingWithCustomUniformSpeed(int timeSpeed)
         {
             if(timeSpeed < 0)
             {
@@ -234,19 +262,25 @@ namespace GlobalMacroRecorder
                 MessageBoxIcon icon = MessageBoxIcon.Warning;
                 MessageBox.Show(messageBoxText, caption, button, icon);//Show message box warning to inform user that the speed of an event connot be faster than instantaneous
                 #endregion
-                for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                foreach (int currentEvent in m_listOfEventsChosenToSetting)
                 {
-                    m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(0);
-                    m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(0);
+                    for (int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    {
+                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(0);
+                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(0);
+                    }
                 }
                 return false;//Return false if timeSpeed < 0
             }
             else
             {
-                for(int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                foreach (int currentEvent in m_listOfEventsChosenToSetting)
                 {
-                    m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(timeSpeed);
-                    m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(timeSpeed);
+                    for (int i = 0; i < m_listEventsWithSetting[currentEvent].Count; i++)
+                    {
+                        m_listEventsWithSetting[currentEvent][i].setTimeSinceLastEvent(timeSpeed);
+                        m_listeventsSerializable[currentEvent][i].setTimeSinceLastEvent(timeSpeed);
+                    }
                 }
                 return true;//Return true if timeSpeed >= 0
             }
@@ -259,6 +293,13 @@ namespace GlobalMacroRecorder
         {
             m_exportEventsConfiration = exportEventsConfiration;
         }
+
+        //Set the attribute m_settingEventsConfiration
+        public void setm_settingEventsConfiration(bool settingEventsConfiration)
+        {
+            m_settingEventsConfiration = settingEventsConfiration;
+        }
+        
         #endregion
 
 
@@ -911,32 +952,25 @@ namespace GlobalMacroRecorder
             //If there are at least one event created
             else
             {
-                #region Parse the radio buttons to know which one is checked
-                int numberIDSelected = 1;
-                //For each component in ScrollPanel of FormModePersonalize Form
-                foreach (object o in ScrollPanel.Controls)
-                {
-                    //If the component is a RadioButton (i.e: If the type of component is a RadioButton).
-                    if (o is System.Windows.Forms.RadioButton)
-                    {
-                        System.Windows.Forms.RadioButton currentRadioButton = (System.Windows.Forms.RadioButton)o;//Stock the component (which is a RadioButton) on a variable called currentRadioButton.
-                                                                                                                  //If the current RadioButton is checked
-                        if (currentRadioButton.Checked == true)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            numberIDSelected++;
-                        }
-                    }
-                }
+                #region Create a ChooseEventsToSetting Form to configure the setting of events chosen by user
+                //Create a ChooseEventsToSetting Form to configure the setting of events chosen by user.
+                ChooseEventsToSetting chooseEventSettingForm = new ChooseEventsToSetting(this);//Create a ChooseEventsToSetting Form to configure the setting of events chosen by user.
+                chooseEventSettingForm.ShowDialog();//Show in modal mode the ChooseEventsToSetting Form.
                 #endregion
 
-                #region Create a EventSettingForm Form to configure the setting of events
-                //Create a EventSettingForm Form to configure the setting of events.
-                EventSettingForm eventSettingForm = new EventSettingForm(this, numberIDSelected-1);//Create a EventSettingForm Form to configure the setting of events.
-                eventSettingForm.ShowDialog();//Show in modal mode the eventSettingForm Form.
+                #region Open the setting Form to setting the chosen events.
+                //If m_settingEventsConfiration attribute is equal to true, open the setting Form to setting the chosen events.
+                if (m_settingEventsConfiration)
+                {
+                    #region Create a ChooseEventsToSetting Form to configure the setting of events chosen by user
+                    //Create a ChooseEventsToSetting Form to configure the setting of events chosen by user.
+                    EventSettingForm eventSettingForm = new EventSettingForm(this);//Create a ChooseEventsToSetting Form to configure the setting of events chosen by user.
+                    eventSettingForm.ShowDialog();//Show in modal mode the ChooseEventsToSetting Form.
+                    #endregion
+
+                    m_listOfEventsChosenToSetting.Clear();//Clear the list m_listOfEventsChosenToSetting
+                    m_settingEventsConfiration = false;//Set the m_settingEventsConfiration attribute to false
+                }
                 #endregion
             }
         }

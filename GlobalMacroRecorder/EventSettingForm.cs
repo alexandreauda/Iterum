@@ -20,7 +20,6 @@ namespace GlobalMacroRecorder
         #region ATTRIBUTES
         /****************** ATTRIBUTES ******************/
         private MacroForm m_MacroForm;
-        private int m_numberIdOfCurrentEvent;
         private int m_numberID_RadioButtonOptionSpeed;
 
         #endregion
@@ -28,7 +27,7 @@ namespace GlobalMacroRecorder
 
         #region CONSTRUCTOR
         /****************** CONSTRUCTOR ******************/
-        public EventSettingForm(MacroForm MacroForm, int numberIdOfCurrentEvent)
+        public EventSettingForm(MacroForm MacroForm)
         {
             InitializeComponent();//Initialize the Form
 
@@ -37,11 +36,8 @@ namespace GlobalMacroRecorder
             #region Initialize primitive attributes
             //Initialize attributes
             m_MacroForm = MacroForm;
-            m_numberIdOfCurrentEvent = numberIdOfCurrentEvent;
             m_numberID_RadioButtonOptionSpeed = 1;
             #endregion
-
-            groupBoxGlobal.Text += m_numberIdOfCurrentEvent+1;
 
             #endregion
         }
@@ -108,7 +104,7 @@ namespace GlobalMacroRecorder
             switch (m_numberID_RadioButtonOptionSpeed)
             {
                 case 1:
-                    m_MacroForm.setm_listEventsWithSettingWithNormalSpeed(m_numberIdOfCurrentEvent);
+                    m_MacroForm.setm_listEventsWithSettingWithNormalSpeed();
                     isValideToClose = true;
                     break;
 
@@ -127,7 +123,7 @@ namespace GlobalMacroRecorder
                     try
                     {
                         resultCustomMultiplierTimeSpeed = Int32.Parse(inputCustomMultiplierTimeSpeed);//Try to transform the entry of inputCustomMultiplierTimeSpeed textbox in integer
-                        int resultOfSetCustomMultiplierSpeed = m_MacroForm.setm_listEventsWithSettingWithCustomMultiplierSpeed(m_numberIdOfCurrentEvent, divideSpeed, resultCustomMultiplierTimeSpeed);//Set the time speed multiplier with the entry of numericUpDownMultiplierTimeSpeed textbox
+                        int resultOfSetCustomMultiplierSpeed = m_MacroForm.setm_listEventsWithSettingWithCustomMultiplierSpeed(divideSpeed, resultCustomMultiplierTimeSpeed);//Set the time speed multiplier with the entry of numericUpDownMultiplierTimeSpeed textbox
                         if(resultOfSetCustomMultiplierSpeed == 1)
                         {
                             isValideToClose = true;
@@ -154,7 +150,7 @@ namespace GlobalMacroRecorder
                     try
                     {
                         resultCustomUniformSpeed = Int32.Parse(inputCustomUniformSpeed);//Try to transform the entry of NumericUpDownUniformSpeed textbox in integer
-                        m_MacroForm.setm_listEventsWithSettingWithCustomUniformSpeed(m_numberIdOfCurrentEvent, resultCustomUniformSpeed);//Set the speed with the entry of NumericUpDownUniformSpeed textbox
+                        m_MacroForm.setm_listEventsWithSettingWithCustomUniformSpeed(resultCustomUniformSpeed);//Set the speed with the entry of NumericUpDownUniformSpeed textbox
                         isValideToClose = true;//Set the variable to close the EventSettingForm Form.
                     }
                     //If we cannot transform the entry of NumericUpDownUniformSpeed textbox in integer, we create a error message box to inform the user and we don't close windows.

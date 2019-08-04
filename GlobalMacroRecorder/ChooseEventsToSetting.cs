@@ -199,7 +199,7 @@ namespace GlobalMacroRecorder
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            m_MacroForm.setm_exportEventsConfiration(false);//Set the m_exportEventsConfiration attribute of the MacroForm m_MacroForm to false.
+            m_MacroForm.setm_settingEventsConfiration(false);//Set the m_settingEventsConfiration attribute of the MacroForm m_MacroForm to false.
             this.Close();//Close the ChooseEventsToSetting Form
         }
 
@@ -217,13 +217,13 @@ namespace GlobalMacroRecorder
                     //If the current CheckBox is checked
                     if (currentCheckBox.Checked == true)
                     {
-                        m_MacroForm.setm_listOfEventsChosenToExport(idOfCheckBox);//Add id of CheckBox which are checked in m_listOfEventsChosenToExport attributes.
+                        m_MacroForm.setm_listOfEventsChosenToSetting(idOfCheckBox);//Add id of CheckBox which are checked in m_listOfEventsChosenToSetting attributes.
                     }
                 }
                 idOfCheckBox++;
             }
             #endregion
-            m_MacroForm.setm_exportEventsConfiration(true);//Set the m_exportEventsConfiration attribute of the MacroForm m_MacroForm to true.
+            m_MacroForm.setm_settingEventsConfiration(true);//Set the m_settingEventsConfiration attribute of the MacroForm m_MacroForm to true.
             this.Close();//Close the ChooseEventsToSetting Form
         }
     }
