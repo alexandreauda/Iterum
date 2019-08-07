@@ -51,9 +51,9 @@
             // ScrollPanel
             // 
             this.ScrollPanel.AutoScroll = true;
-            this.ScrollPanel.Location = new System.Drawing.Point(6, 12);
+            this.ScrollPanel.Location = new System.Drawing.Point(6, 19);
             this.ScrollPanel.Name = "ScrollPanel";
-            this.ScrollPanel.Size = new System.Drawing.Size(344, 268);
+            this.ScrollPanel.Size = new System.Drawing.Size(344, 261);
             this.ScrollPanel.TabIndex = 0;
             // 
             // checkAllButton
