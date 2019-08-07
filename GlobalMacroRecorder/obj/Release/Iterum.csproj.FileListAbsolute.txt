@@ -18,4 +18,6 @@ C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Re
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Release\Iterum.csproj.GenerateResource.Cache
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Release\GlobalMacroRecorder.exe
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\GlobalMacroRecorder\obj\Release\GlobalMacroRecorder.pdb
-C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Release\GlobalMacroRecorder.ChooseEventToImported.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Release\GlobalMacroRecorder.ChooseEventsToSetting.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Release\GlobalMacroRecorder.EventSettingForm.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\GlobalMacroRecorder\obj\Release\GlobalMacroRecorder.ChooseEventsToExport.resources

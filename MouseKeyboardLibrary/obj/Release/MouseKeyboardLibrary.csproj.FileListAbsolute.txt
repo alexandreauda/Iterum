@@ -2,3 +2,4 @@ C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\bin\Relea
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\bin\Release\MouseKeyboardLibrary.pdb
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\obj\Release\MouseKeyboardLibrary.dll
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\obj\Release\MouseKeyboardLibrary.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\MouseKeyboardLibrary\obj\Release\MouseKeyboardLibrary.csprojResolveAssemblyReference.cache

@@ -8,3 +8,13 @@ C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\SampleApplication\obj\Rele
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\SampleApplication\obj\Release\HookSampleApplication.csproj.GenerateResource.Cache
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\SampleApplication\obj\Release\SampleApplication.exe
 C:\Users\Alexandre\Documents\Projets_C_C++\Iterum_Git\SampleApplication\obj\Release\SampleApplication.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\bin\Release\SampleApplication.exe
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\bin\Release\SampleApplication.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\bin\Release\MouseKeyboardLibrary.dll
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\bin\Release\MouseKeyboardLibrary.pdb
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\obj\Release\HookSampleApplication.csprojResolveAssemblyReference.cache
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\obj\Release\SampleApplication.Properties.Resources.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\obj\Release\SampleApplication.HookTestForm.resources
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\obj\Release\HookSampleApplication.csproj.GenerateResource.Cache
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\obj\Release\SampleApplication.exe
+C:\Users\Alexandre\Documents\Projets_C_C++\Iterum\SampleApplication\obj\Release\SampleApplication.pdb
