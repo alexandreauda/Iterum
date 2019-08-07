@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseEventsToExport));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseEventsToSetting));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ScrollPanel = new System.Windows.Forms.Panel();
             this.checkAllButton = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.groupBox1.Size = new System.Drawing.Size(356, 286);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Choose the Events to export";
+            this.groupBox1.Text = "Choose the Events to setting";
             // 
             // ScrollPanel
             // 
@@ -96,7 +96,7 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // ChooseEventToImported
+            // ChooseEventsToSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,7 +107,7 @@
             this.Controls.Add(this.checkAllButton);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ChooseEventToImported";
+            this.Name = "ChooseEventsToSetting";
             this.Text = "Iterum";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
